@@ -1,0 +1,73 @@
+feature mark {
+	# Mark anchors
+
+		markClass [@combAbove]    <anchor -286 520> @markA;
+		markClass [@combAboveCap] <anchor -320 690> @markA;
+		markClass [@combBelow]    <anchor -286   0> @markB;
+
+	# Base anchors
+
+		pos base A <anchor 315 690> mark @markA <anchor 315    0> mark @markB;
+		pos base B <anchor 325 690> mark @markA <anchor 335    0> mark @markB;
+		pos base C <anchor 340 690> mark @markA <anchor 340    0> mark @markB;
+		pos base D <anchor 330 690> mark @markA <anchor 330    0> mark @markB;
+		pos base E <anchor 316 690> mark @markA <anchor 316    0> mark @markB;
+		pos base F <anchor 310 690> mark @markA <anchor 142    0> mark @markB;
+		pos base G <anchor 340 690> mark @markA <anchor 340    0> mark @markB;
+		pos base H <anchor 350 690> mark @markA <anchor 350    0> mark @markB;
+		pos base I <anchor 132 690> mark @markA <anchor 132    0> mark @markB;
+		pos base J <anchor 384 690> mark @markA <anchor 290    0> mark @markB;
+		pos base K <anchor 320 690> mark @markA <anchor 320    0> mark @markB;
+		pos base L <anchor 142 690> mark @markA <anchor 300    0> mark @markB;
+		pos base M <anchor 435 690> mark @markA <anchor 435    0> mark @markB;
+		pos base N <anchor 366 690> mark @markA <anchor 354    0> mark @markB;
+		pos base O <anchor 350 690> mark @markA <anchor 350    0> mark @markB;
+		pos base P <anchor 310 690> mark @markA <anchor 142    0> mark @markB;
+		pos base Q <anchor 350 690> mark @markA <anchor 350 -150> mark @markB;
+		pos base R <anchor 316 690> mark @markA <anchor 316    0> mark @markB;
+		pos base S <anchor 290 690> mark @markA <anchor 290    0> mark @markB;
+		pos base T <anchor 296 690> mark @markA <anchor 296    0> mark @markB;
+		pos base U <anchor 344 690> mark @markA <anchor 344    0> mark @markB;
+		pos base V <anchor 310 690> mark @markA <anchor 310    0> mark @markB;
+		pos base W <anchor 460 690> mark @markA <anchor 460    0> mark @markB;
+		pos base X <anchor 305 690> mark @markA <anchor 305    0> mark @markB;
+		pos base Y <anchor 290 690> mark @markA <anchor 290    0> mark @markB;
+		pos base Z <anchor 300 690> mark @markA <anchor 300    0> mark @markB;
+
+		pos base a <anchor 272 520> mark @markA <anchor 272    0> mark @markB;
+		pos base b <anchor 125 732> mark @markA <anchor 295    0> mark @markB;
+		pos base c <anchor 284 520> mark @markA <anchor 284    0> mark @markB;
+		pos base d <anchor 457 732> mark @markA <anchor 287    0> mark @markB;
+		pos base e <anchor 287 520> mark @markA <anchor 287    0> mark @markB;
+		pos base f <anchor 224 732> mark @markA <anchor 125    0> mark @markB;
+		pos base g <anchor 287 520> mark @markA <anchor 287 -200> mark @markB;
+		pos base h <anchor 125 732> mark @markA <anchor 295    0> mark @markB;
+		pos base i <anchor 120 706> mark @markA <anchor 120    0> mark @markB;
+		pos base j <anchor 120 706> mark @markA <anchor  80 -200> mark @markB;
+		pos base k <anchor 125 732> mark @markA <anchor 270    0> mark @markB;
+		pos base l <anchor 116 732> mark @markA <anchor 155    0> mark @markB;
+		pos base m <anchor 450 520> mark @markA <anchor 450    0> mark @markB;
+		pos base n <anchor 295 520> mark @markA <anchor 295    0> mark @markB;
+		pos base o <anchor 292 520> mark @markA <anchor 292    0> mark @markB;
+		pos base p <anchor 295 520> mark @markA <anchor 125 -200> mark @markB;
+		pos base q <anchor 287 520> mark @markA <anchor 457 -200> mark @markB;
+		pos base r <anchor 208 520> mark @markA <anchor 116    0> mark @markB;
+		pos base s <anchor 250 520> mark @markA <anchor 250    0> mark @markB;
+		pos base t <anchor 121 690> mark @markA <anchor 224    0> mark @markB;
+		pos base u <anchor 291 520> mark @markA <anchor 291    0> mark @markB;
+		pos base v <anchor 260 520> mark @markA <anchor 260    0> mark @markB;
+		pos base w <anchor 396 520> mark @markA <anchor 396    0> mark @markB;
+		pos base x <anchor 260 520> mark @markA <anchor 260    0> mark @markB;
+		pos base y <anchor 260 520> mark @markA <anchor 240 -200> mark @markB;
+		pos base z <anchor 255 520> mark @markA <anchor 255    0> mark @markB;
+
+		pos base AE     <anchor 462 690> mark @markA <anchor 462 0> mark @markB;
+		pos base OE     <anchor 534 690> mark @markA <anchor 534 0> mark @markB;
+		pos base Oslash <anchor 350 690> mark @markA <anchor 350 0> mark @markB;
+
+		pos base ae       <anchor 422 520> mark @markA <anchor 422    0> mark @markB;
+		pos base oe       <anchor 462 520> mark @markA <anchor 462    0> mark @markB;
+		pos base oslash   <anchor 292 520> mark @markA <anchor 292    0> mark @markB;
+		pos base dotlessi <anchor 120 520> mark @markA <anchor 120    0> mark @markB;
+		pos base uni0237  <anchor 120 520> mark @markA <anchor  80 -200> mark @markB;
+} mark;

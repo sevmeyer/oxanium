@@ -1,0 +1,47 @@
+maxp {
+	128 maxStackElements
+	  8 maxFunctionDefs
+	  0 maxStorage
+	  2 maxZones
+	  2 maxTwilightPoints
+}
+
+gasp {
+	65535 doGridfit doGray symGridfit symSmoothing
+}
+
+cvt {
+	# All weights use the Regular values, until
+	# the difference is greater than the CVT cut-in.
+
+	   0 baseline
+	 690 capHeight
+	 520 lowHeight
+	 410 supHeight
+	 390 ordHeight
+	 740 ascender
+	-200 descender
+}
+
+flags {
+	y 0
+	x 1
+	r 1
+
+	rp0 1
+	rp1 1
+	rp2 0
+
+	abs 1 # For SHP after MDAP, MIAP
+	rel 0 # For SHP after MDRP, MIRP, MSIRP
+
+	cur  0
+	orig 1
+
+	stem 01001 # pMrB
+	STEM 11001 # PMrB
+	gap  01110 # pMRW
+	GAP  11110 # PMRW
+	grid 01100 # pMRG
+	GRID 11100 # PMRG
+}

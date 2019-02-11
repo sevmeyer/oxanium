@@ -1,0 +1,190 @@
+fpgm {
+
+	# Moves point by relative distance.
+	# Snaps to grid with preference to round up.
+	void 0 moveFar pt
+		push 0b01001010 # Period=1 Phase=0 Threshold=6/8
+		SROUND
+		MDRP[GRID]
+		RTG
+	ENDF
+
+	# Moves point accross gap by relative distance.
+	# Snaps to grid with strong preference to round down.
+	void 1 moveGap pt
+		push 0b01000101 # Period=1 Phase=0 Threshold=1/8
+		SROUND
+		MDRP[GRID]
+		RTG
+	ENDF
+
+	# Moves point to set height of punctuation.
+	# Snaps to grid with strong preference to round up.
+	void 2 movePunc pt
+		push 0b01001011 # Period=1 Phase=0 Threshold=7/8
+		SROUND
+		MDRP[GRID]
+		RTG
+	ENDF
+
+	# Moves point to set height of superscripts and ordinals.
+	# Snaps to grid with strong preference to round up.
+	void 3 moveSup pt cvt
+		push 0b01001011 # Period=1 Phase=0 Threshold=7/8
+		SROUND
+		MIRP[GRID]
+		RTG
+	ENDF
+
+	# Positions dash-like glyph.
+	# Snaps to grid with preference to round up.
+	void 4 posDash pt
+		push 0b01001010 # Period=1 Phase=0 Threshold=6/8
+		SROUND
+		MDAP[r]
+		RTG
+	ENDF
+
+	# Positions bottom of diacritic on the grid, relative to a
+	# snapped base control value. The distance is at least 1px.
+	void 5 posDiac ptDiac cvtBase
+		# Calculate original distance.
+		DUP
+		RCVT # cvtBase
+		ROLL
+		DUP
+		GC[orig] # ptDiac
+		ROLL
+		SUB
+
+		# Adjust distance.
+		ROUND
+		push 1.0 # Minimum
+		MAX
+
+		# Create twilight point at cvtBase.
+		ROLL
+		push 0 # Twilight point
+		push 0 # Twilight zone
+		SZP0
+		SWAP
+		MIAP[r]
+
+		# Move ptDiac relative to twilight point by adjusted distance.
+		MSIRP[rp0]
+
+		# Restore zone pointer.
+		push 1
+		SZP0
+	ENDF
+
+	# Interpolates point and snaps it to the grid.
+	void 6 ipGrid pt ptRef1 ptRef2
+		SRP2
+		SRP1
+		DUP
+		IP
+		MDAP[r]
+	ENDF
+
+	# Interpolates crossbar and snaps either the top
+	# or bottom to the grid as accurately as possible.
+	# Returns with rp1=ptBarTop and rp2=ptBarBottom.
+	void 7 ipBar ptBarTop ptBarBottom ptRef1 ptRef2
+		SRP2
+		SRP1
+
+		# Copy the points for later.
+		DUP
+		ROLL
+		DUP
+		ROLL
+		# B T T B
+
+		# Interpolate crossbar points. This stretches
+		# the crossbar and needs to be corrected below.
+		DUP
+		IP
+		SWAP
+		DUP
+		IP
+		# B T B T
+
+		# Align points at interpolated middle.
+		DUP
+		ROLL
+		DUP
+		ROLL
+		ALIGNPTS
+		# B T T B
+
+		# Compute half of the original crossbar height.
+		DUP
+		ROLL
+		DUP
+		ROLL
+		MD[orig]
+		push 0.5
+		MUL
+		# B T B T H
+
+		# Move each point outward by half the original height,
+		# to establish their ideal unrounded position.
+		DUP
+		ROLL
+		DUP
+		ROLL
+		SHPIX # Top
+		SWAP
+		ROLL
+		DUP
+		ROLL
+		NEG
+		SHPIX # Bottom
+		# B T T B
+
+		# Snap bottom to the grid and measure difference.
+		DUP
+		DUP
+		DUP
+		GC[cur]
+		SWAP
+		MDAP[r]
+		SWAP
+		GC[cur]
+		SUB
+		ABS
+		# B T T B dB
+
+		# Snap top to the grid and measure difference.
+		ROLL
+		DUP
+		DUP
+		DUP
+		GC[cur]
+		SWAP
+		MDAP[r]
+		SWAP
+		GC[cur]
+		SUB
+		ABS
+		# B T B dB T dT
+
+		# Use the point that was closest to the grid as reference,
+		# and move the other point away by the original distance.
+		ROLL
+		GT
+		IF
+			SWAP
+		EIF
+		SRP0
+		MDRP[stem]
+		# B T
+
+		# Set consistent reference points.
+		SRP1
+		SRP2
+	ENDF
+
+	# Note to self: Update maxp when adding functions.
+}

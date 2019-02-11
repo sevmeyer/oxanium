@@ -1,0 +1,108 @@
+# Base glyphs with anchors
+
+	@baseCap = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AE OE Oslash];
+	@baseLow = [a b c d e f g h i j k l m n o p q r s t u v w x y z ae oe oslash dotlessi uni0237];
+
+# Combining diacritics with anchors
+
+	@combAbove    = [uni0300 uni0301 uni0302 uni0303 uni0304 uni0306
+	                 uni0307 uni0308 uni030A uni030B uni030C];
+	@combAboveCap = [uni0300.cap uni0301.cap uni0302.cap uni0303.cap uni0304.cap uni0306.cap
+	                 uni0307.cap uni0308.cap uni030A.cap uni030B.cap uni030C.cap];
+	@combBelow    = [uni0326 uni0327 uni0328];
+
+# Convenience letter classes
+
+	# These classes are not used directly,
+	# but are added to the kerning classes below.
+
+	@A = [A Agrave Aacute Acircumflex Atilde Adieresis Aring Amacron Abreve Aogonek];
+	@C = [C Ccedilla Cacute Ccaron];
+	@E = [E Egrave Eacute Ecircumflex Edieresis Emacron Edotaccent Eogonek Ecaron];
+	@K = [K uni0136];
+	@L = [L Lacute uni013B Lcaron Lslash];
+	@T = [T uni0162 Tcaron uni021A];
+	@Y = [Y Yacute Ydieresis];
+
+	@a = [a agrave aacute acircumflex atilde adieresis aring amacron abreve aogonek];
+	@c = [c ccedilla cacute ccaron];
+	@e = [e egrave eacute ecircumflex edieresis emacron edotaccent eogonek ecaron];
+	@g = [g gbreve uni0123];
+	@k = [k uni0137];
+	@l = [l lacute uni013C];
+	@n = [n ntilde nacute uni0146 ncaron];
+	@o = [o ograve oacute ocircumflex otilde odieresis oslash omacron ohungarumlaut];
+	@r = [r uni0157];
+	@s = [s sacute scedilla scaron uni0219];
+	@t = [t uni0163 uni021B];
+	@u = [u ugrave uacute ucircumflex udieresis umacron uring uhungarumlaut uogonek];
+	@y = [y yacute ydieresis];
+	@z = [z zacute zdotaccent zcaron];
+
+# Left letter kerning classes
+
+	@A_  = [@A];
+	@C_  = [@C @E AE OE];
+	@F_  = [F];
+	@K_  = [@K];
+	@L_  = [@L];
+	@P_  = [P];
+	@T_  = [@T @Y];
+	@V_  = [V];
+	@W_  = [W];
+	@X_  = [X];
+	@SS_ = [uni1E9E];
+
+	@a_  = [@a b @e h m @n @o p @s ae thorn oe];
+	@c_  = [@c @t];
+	@f_  = [f racute rcaron];
+	@g_  = [@g q @u];
+	@k_  = [@k x @z];
+	@l_  = [@l germandbls];
+	@r_  = [@r];
+	@v_  = [v @y];
+	@w_  = [w];
+	@ii_ = [iacute icircumflex idieresis imacron dcaron dcroat];
+
+# Right letter kerning classes
+
+	@_A = [@A AE];
+	@_J = [J];
+	@_T = [@T @Y];
+	@_V = [V];
+	@_W = [W];
+	@_X = [X];
+
+	@_a  = [@a ae];
+	@_c  = [@c d @e @g @o q @s eth dcaron dcroat oe];
+	@_j  = [j];
+	@_m  = [m @n p @r @u];
+	@_v  = [v @y];
+	@_w  = [w];
+	@_x  = [x @z];
+	@_ii = [igrave icircumflex idieresis imacron];
+
+# Convenience punctuation classes
+
+	@quote      = [quotedbl quotesingle];
+	@fancyquote = [quoteleft quoteright quotedblleft quotedblright];
+	@basequote  = [quotesinglbase quotedblbase];
+	@period     = [comma period ellipsis];
+	@hyphen     = [hyphen endash emdash];
+	@guillemotl = [guillemotleft guilsinglleft];
+	@guillemotr = [guillemotright guilsinglright];
+	@ordinal    = [ordfeminine ordmasculine];
+
+# Punctuation kerning classes
+
+	@puncAbove_  = [@quote asterisk degree];
+	@puncBelow_  = [@period backslash underscore @basequote questiondown];
+	@puncMiddle_ = [@hyphen @guillemotr];
+	@slash_      = [slash @fancyquote];
+	@bracket_    = [parenleft bracketleft braceleft];
+
+	@_puncAbove  = [@quote asterisk degree question @fancyquote @ordinal];
+	@_puncBelow  = [@period slash underscore @basequote];
+	@_puncMiddle = [@hyphen @guillemotl];
+	@_backslash  = [backslash trademark];
+	@_bracket    = [parenright bracketright braceright];

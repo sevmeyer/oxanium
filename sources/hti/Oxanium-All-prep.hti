@@ -1,0 +1,43 @@
+prep {
+	# Set native ClearType mode.
+
+		INSTCTRL 4 3
+
+	# Disable hinting below 9 ppem.
+
+		SVTCA[y]
+		IF (9 > (MPPEM))
+			INSTCTRL 1 1
+		EIF
+
+	# Reduce minimum_distance for thin weights.
+
+		#ifLight      SMD 0.75
+		#ifExtraLight SMD 0.625
+
+	# Set CVT cut-in.
+
+		IF (50 >= (MPPEM))
+			SCVTCI 2.0
+		ELSE
+			SCVTCI 0.0
+		EIF
+
+	# Adjust control values.
+
+		deltac capHeight  9+3 10+5 12+2 13+5 15+2 16+4 18+1 21+1 28+2 34+1
+		deltac lowHeight 10+3 12+3 14+2 16+2 18+2 20+1 22+1 24+1
+		deltac supHeight  9+4 10+1 12+2 14+4 17+2 # Threshold=7/8
+		deltac ordHeight 10+2 13+1 18+1           # Threshold=7/8
+		deltac ascender  10+1 14+2 16+6 18+2 25-1
+		deltac descender 12-1 17-1 22-1
+
+	# Use smart dropout control.
+
+		# Stop argument consolidation, to create
+		# byte pattern required by Font Bakery.
+		CLEAR
+
+		SCANCTRL 0x01FF
+		SCANTYPE 4
+}

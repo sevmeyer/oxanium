@@ -1,0 +1,2516 @@
+# Most instructions follow a common order, to simplify reuse and
+# optimize compression. The order is based on personal preference.
+# Take with a grain of salt.
+#
+# Point order
+#
+#  Start on bottom left
+#  Favor an even distribution of touched points
+#  Favor symmetry
+#
+# Control value order
+#
+#  Baseline
+#  Height
+#  Ascender
+#  Descender
+#
+# Examples
+#               .-3 .-2
+#      .-----2  | | | |
+#      | 3-. |  | '-4 |
+# .-1  | | | |  | 5-. |
+# | |  | '-1 |  | | | |
+# 0-'  0-----'  0-' 1-'
+
+space {
+}
+
+exclam {
+	SVTCA[y]
+	MIAP[r]       0 baseline
+	CALL movePunc 2
+	CALL moveGap  4
+	MIAP[r]       6 capHeight
+	IUP[y]
+}
+
+quotedbl {
+}
+
+numbersign {
+	SVTCA[y]
+	MIAP[r]    26 baseline
+	SHP[abs]   22
+	MIAP[r]    12 capHeight
+	SHP[abs]    8
+
+	CALL ipBar 18 0 26 12
+	SHP[rp1]   29 2
+	SHP[rp2]   24 20
+
+	CALL ipBar 14 4 26 12
+	SHP[rp1]   10 6
+	SHP[rp2]   31 16
+	IUP[y]
+}
+
+dollar {
+	SVTCA[y]
+	MIAP[r]      37 baseline
+	SHP[abs]     33
+	MDRP[stem]    2
+	CALL moveFar 35
+
+	MDAP[r]      18
+	SHP[abs]     14
+	MDRP[stem]   21
+	CALL moveFar 16
+
+	SRP1     37
+	SRP2     18
+	IP       26
+	SRP2     26
+	SHP[rp2]  7 8 27
+	IUP[y]
+}
+
+percent {
+}
+
+ampersand {
+	SVTCA[y]
+	MIAP[r]    24 baseline
+	MDRP[stem] 29
+	MIAP[r]    11 capHeight
+	MDRP[stem] 14
+	CALL ipBar 20 31 24 11
+	SHP[rp2]   22
+	IP          4
+	IUP[y]
+}
+
+quotesingle {
+	SVTCA[y]
+	MIAP[r]      2 ascender
+	CALL moveFar 0
+	IUP[y]
+}
+
+parenleft {
+	SVTCA[y]
+	MIAP[r] 2 ascender
+	MIAP[r] 7 descender
+	IUP[y]
+}
+
+parenright {
+	SVTCA[y]
+	MIAP[r] 4 ascender
+	MIAP[r] 7 descender
+	IUP[y]
+}
+
+asterisk {
+	SVTCA[y]
+	MIAP[r] 4 capHeight
+	IUP[y]
+}
+
+plus {
+	SVTCA[y]
+	CALL posDash  6
+	SHP[abs]      2
+	MDRP[grid]    4
+	MDRP[STEM]    0
+	SHP[rel]      8
+	MDRP[grid]   10
+	IUP[y]
+}
+
+comma {
+	SVTCA[y]
+	MDAP[r]       5
+	CALL movePunc 2
+	CALL moveFar  4
+	IUP[y]
+}
+
+hyphen {
+	SVTCA[y]
+	CALL posDash 2
+	MDRP[stem]   0
+	IUP[y]
+}
+
+period {
+	SVTCA[y]
+	MIAP[r]       0 baseline
+	CALL movePunc 2
+	IUP[y]
+}
+
+slash {
+	SVTCA[y]
+	MIAP[r] 1 ascender
+	MDAP[r] 3
+	IUP[y]
+}
+
+zero {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 15
+	MIAP[r]     4 capHeight
+	MDRP[stem] 21
+	IUP[y]
+}
+
+one {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 9
+	SHP[rel]   2
+	MIAP[r]    7 capHeight
+	MDRP[stem] 4
+	IUP[y]
+}
+
+two {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MDRP[stem] 23
+	MIAP[r]    13 capHeight
+	MDRP[stem] 10
+	SRP2        0
+	IP          4
+	SRP2        4
+	SHP[rp2]    3 18 19
+	IUP[y]
+}
+
+three {
+	SVTCA[y]
+	MIAP[r]    32 baseline
+	MDRP[stem]  2
+	MIAP[r]    19 capHeight
+	MDRP[stem] 16
+	CALL ipBar 10 8 32 19
+	IP         25
+	IUP[y]
+}
+
+four {
+	SVTCA[y]
+	MIAP[r]     10 baseline
+	MIAP[r]      3 capHeight
+	CALL ipGrid  8 10 3
+	CALL ipBar   6 0 10 3
+	SHP[rp1]     1
+	IUP[y]
+}
+
+five {
+	SVTCA[y]
+	MIAP[r]    20 baseline
+	MDRP[stem]  2
+	MIAP[r]    10 capHeight
+	MDRP[stem] 12
+	CALL ipBar 14 8 20 10
+	IUP[y]
+}
+
+six {
+	SVTCA[y]
+	MIAP[r]    17 baseline
+	MDRP[stem] 22
+	MIAP[r]     4 capHeight
+	MDRP[stem]  7
+	CALL ipBar 11 28 17 4
+	IUP[y]
+}
+
+seven {
+	SVTCA[y]
+	MIAP[r]    5 baseline
+	MIAP[r]    2 capHeight
+	SHP[abs]   3 7
+	MDRP[stem] 0
+	IUP[y]
+}
+
+eight {
+	SVTCA[y]
+	MIAP[r]    24 baseline
+	MDRP[stem] 29
+	MIAP[r]    11 capHeight
+	MDRP[stem] 47
+	CALL ipBar 41 35 24 11
+	IP          4 17
+	IUP[y]
+}
+
+nine {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 13
+	MIAP[r]     4 capHeight
+	MDRP[stem] 26
+	CALL ipBar 22 17 10 4
+	IUP[y]
+}
+
+colon {
+}
+
+semicolon {
+}
+
+less {
+	SVTCA[y]
+	RTHG
+	MDAP[r] 4
+	RTG
+	IUP[y]
+}
+
+equal {
+	SVTCA[y]
+	MDAP[r]    2
+	MDRP[stem] 0
+	MDRP[GRID] 6
+	MDRP[stem] 4
+	IUP[y]
+}
+
+greater {
+	SVTCA[y]
+	RTHG
+	MDAP[r] 1
+	RTG
+	IUP[y]
+}
+
+question {
+	SVTCA[y]
+	MIAP[r]       19 baseline
+	CALL movePunc 21
+	CALL moveGap  11
+	MIAP[r]        3 capHeight
+	MDRP[stem]     0
+	CALL ipBar    13 9 19 3
+	IUP[y]
+}
+
+at {
+	SVTCA[y]
+	MIAP[r]     4 capHeight
+	MDRP[stem] 14
+	MDRP[GRID] 12
+	MDRP[stem] 30
+	MDRP[GRID]  6
+	MDRP[stem] 28
+	MDRP[GRID] 23
+	MDRP[stem] 20
+	IUP[y]
+}
+
+A {
+	SVTCA[y]
+	MIAP[r]     9 baseline
+	SHP[abs]    4
+	MIAP[r]     2 capHeight
+	MDRP[stem] 13
+	CALL ipBar 11 7 9 2
+	IUP[y]
+}
+
+B {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MDRP[stem] 16
+	MIAP[r]     2 capHeight
+	MDRP[stem] 30
+	CALL ipBar 24 22 0 2
+	IP          8
+	IUP[y]
+}
+
+C {
+	SVTCA[y]
+	MIAP[r]    16 baseline
+	MDRP[stem] 13
+	MIAP[r]     3 capHeight
+	MDRP[stem]  6
+	IUP[y]
+}
+
+D {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MDRP[stem]  8
+	MIAP[r]     1 capHeight
+	MDRP[stem] 15
+	IUP[y]
+}
+
+E {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MDRP[stem] 10
+	MIAP[r]     2 capHeight
+	MDRP[stem]  4
+	CALL ipBar  6 8 0 2
+	IUP[y]
+}
+
+F {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MIAP[r]    2 capHeight
+	MDRP[stem] 4
+	CALL ipBar 6 8 0 2
+	IUP[y]
+}
+
+G {
+	SVTCA[y]
+	MIAP[r]    19 baseline
+	MDRP[stem] 13
+	MIAP[r]     4 capHeight
+	MDRP[stem]  7
+	CALL ipBar 17 15 19 4
+	IUP[y]
+}
+
+H {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	SHP[abs]   8
+	MIAP[r]    6 capHeight
+	SHP[abs]   2
+	CALL ipBar 4 10 0 6
+	IUP[y]
+}
+
+I {
+	SVTCA[y]
+	MIAP[r] 0 baseline
+	MIAP[r] 1 capHeight
+	IUP[y]
+}
+
+J {
+	SVTCA[y]
+	MIAP[r]      16 baseline
+	MDRP[stem]    6
+	CALL moveFar  2
+	MIAP[r]      12 capHeight
+	MDRP[stem]   10
+	IUP[y]
+}
+
+K {
+	SVTCA[y]
+	MIAP[r]   0 baseline
+	SHP[abs] 10
+	MIAP[r]   4 capHeight
+	SHP[abs]  2
+	SRP2      0
+	IP        3 7 11 12
+	IUP[y]
+}
+
+L {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 4
+	MIAP[r]    2 capHeight
+	IUP[y]
+}
+
+M {
+	SVTCA[y]
+	MIAP[r]  0 baseline
+	SHP[abs] 6
+	MIAP[r]  4 capHeight
+	SHP[abs] 2
+	SRP2     0
+	IP       3 10 8 11
+	IUP[y]
+}
+
+N {
+	SVTCA[y]
+	MIAP[r]  0 baseline
+	SHP[abs] 7
+	MIAP[r]  5 capHeight
+	SHP[abs] 2
+	SRP2     0
+	IP       3 8
+	IUP[y]
+}
+
+O {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 15
+	MIAP[r]     4 capHeight
+	MDRP[stem] 21
+	IUP[y]
+}
+
+P {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MIAP[r]     2 capHeight
+	MDRP[stem] 17
+	CALL ipBar 11 8 0 2
+	IUP[y]
+}
+
+Q {
+	SVTCA[y]
+	MIAP[r]      14 baseline
+	SHP[abs]      9
+	MDRP[stem]   19
+	CALL moveFar 12
+	MIAP[r]       4 capHeight
+	MDRP[stem]   25
+	IUP[y]
+}
+
+R {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]   10
+	MIAP[r]     2 capHeight
+	MDRP[stem] 21
+	CALL ipBar 15 12 0 2
+	SHP[rp2]    7
+	IUP[y]
+}
+
+S {
+	SVTCA[y]
+	MIAP[r]    29 baseline
+	MDRP[stem]  2
+	MIAP[r]    14 capHeight
+	MDRP[stem] 17
+	SRP2       29
+	IP         22
+	SRP2       22
+	SHP[rp2]    7 8 23
+	IUP[y]
+}
+
+T {
+	SVTCA[y]
+	MIAP[r]    6 baseline
+	MIAP[r]    2 capHeight
+	MDRP[stem] 0
+	SHP[rel]   4
+	IUP[y]
+}
+
+U {
+	SVTCA[y]
+	MIAP[r]    14 baseline
+	MDRP[stem]  6
+	MIAP[r]    10 capHeight
+	SHP[abs]    2
+	IUP[y]
+}
+
+V {
+	SVTCA[y]
+	MIAP[r]    9 baseline
+	MDRP[stem] 4
+	MIAP[r]    6 capHeight
+	SHP[abs]   2
+	IUP[y]
+}
+
+W {
+	SVTCA[y]
+	MIAP[r]    16 baseline
+	SHP[abs]   12
+	MDRP[stem]  4
+	SHP[rel]    7
+	MIAP[r]     9 capHeight
+	SHP[abs]    2
+	SRP2       16
+	IP          6 14
+	IUP[y]
+}
+
+X {
+	SVTCA[y]
+	MIAP[r]  15 baseline
+	SHP[abs] 11
+	MIAP[r]   7 capHeight
+	SHP[abs]  3
+	SRP2     15
+	IP        1 5 9 13
+	IUP[y]
+}
+
+Y {
+	SVTCA[y]
+	MIAP[r]  9 baseline
+	MIAP[r]  5 capHeight
+	SHP[abs] 1
+	SRP2     9
+	IP       3 7 10
+	IUP[y]
+}
+
+Z {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 8
+	IP         1
+	MIAP[r]    5 capHeight
+	MDRP[stem] 3
+	IP         6
+	IUP[y]
+}
+
+bracketleft {
+	SVTCA[y]
+	MIAP[r]    0 descender
+	MDRP[stem] 6
+	MIAP[r]    2 ascender
+	MDRP[stem] 4
+	IUP[y]
+}
+
+backslash {
+	SVTCA[y]
+	MIAP[r] 1 ascender
+	MDAP[r] 3
+	IUP[y]
+}
+
+bracketright {
+	SVTCA[y]
+	MIAP[r]    7 descender
+	MDRP[stem] 1
+	MIAP[r]    5 ascender
+	MDRP[stem] 2
+	IUP[y]
+}
+
+asciicircum {
+	SVTCA[y]
+	MIAP[r]  2 capHeight
+	SHP[abs] 5
+	IUP[y]
+}
+
+underscore {
+	SVTCA[y]
+	MIAP[r]    3 descender
+	MDRP[stem] 1
+	IUP[y]
+}
+
+grave {
+}
+
+a {
+	SVTCA[y]
+	MIAP[r]    15 baseline
+	MDRP[stem] 20
+	MIAP[r]    11 lowHeight
+	MDRP[stem]  8
+	CALL ipBar  4 22 15 11
+	IUP[y]
+}
+
+b {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MDRP[stem] 11
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 17
+	MIAP[r]     2 ascender
+	IUP[y]
+}
+
+c {
+	SVTCA[y]
+	MIAP[r]    16 baseline
+	MDRP[stem] 13
+	MIAP[r]     3 lowHeight
+	MDRP[stem]  6
+	IUP[y]
+}
+
+d {
+	SVTCA[y]
+	MIAP[r]     8 baseline
+	MDRP[stem] 13
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 15
+	MIAP[r]     6 ascender
+	IUP[y]
+}
+
+e
+{
+	SVTCA[y]
+	MIAP[r]    15 baseline
+	MDRP[stem] 12
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 21
+	CALL ipBar 18 8 15 4
+	IUP[y]
+}
+
+f {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MIAP[r]    11 lowHeight
+	MDRP[stem] 13
+	MIAP[r]     4 ascender
+	MDRP[stem]  7
+	IUP[y]
+}
+
+g {
+	SVTCA[y]
+	MIAP[r]    14 baseline
+	MDRP[stem] 20
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 22
+	MIAP[r]     8 descender
+	MDRP[stem] 11
+	IUP[y]
+}
+
+h {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]    8
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 12
+	MIAP[r]     2 ascender
+	IUP[y]
+}
+
+i {
+	SVTCA[y]
+	MIAP[r]      4 baseline
+	MIAP[r]      6 lowHeight
+	MDRP[GAP]    0
+	CALL moveFar 2
+	IUP[y]
+}
+
+j {
+	SVTCA[y]
+	MIAP[r]       7 descender
+	SHP[abs]      0 2 5
+	MIAP[r]       4 lowHeight
+	MDRP[GAP]     8
+	CALL moveFar 10
+	IUP[y]
+}
+
+k {
+	SVTCA[y]
+	MIAP[r]   0 baseline
+	SHP[abs] 10
+	MIAP[r]   4 lowHeight
+	SRP2      0
+	IP        3 7 11 12
+	MIAP[r]   2 ascender
+	IUP[y]
+}
+
+l {
+	SVTCA[y]
+	RTDG
+	MIAP[r]  6 baseline
+	RTG
+	SHP[abs] 0 3 5
+	MIAP[r]  2 ascender
+	IUP[y]
+}
+
+m {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]   12
+	SHP[abs]    6
+	MIAP[r]     2 lowHeight
+	MDRP[stem] 10
+	SHP[rel]   14
+	IUP[y]
+}
+
+n {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]    6
+	MIAP[r]     2 lowHeight
+	MDRP[stem] 10
+	IUP[y]
+}
+
+o {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 15
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 21
+	IUP[y]
+}
+
+p {
+	SVTCA[y]
+	MIAP[r]     8 baseline
+	MDRP[stem] 11
+	MIAP[r]     2 lowHeight
+	MDRP[stem] 17
+	MIAP[r]     0 descender
+	IUP[y]
+}
+
+q {
+	SVTCA[y]
+	MIAP[r]     8 baseline
+	MDRP[stem] 13
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 15
+	MIAP[r]     6 descender
+	IUP[y]
+}
+
+r {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MIAP[r]    4 lowHeight
+	MDRP[stem] 7
+	IUP[y]
+}
+
+s {
+	SVTCA[y]
+	MIAP[r]    25 baseline
+	MDRP[stem]  2
+	MIAP[r]    12 lowHeight
+	MDRP[stem] 15
+	SRP2       25
+	IP         19
+	SRP2       19
+	SHP[rp2]    6 7 20
+	IUP[y]
+}
+
+t {
+	SVTCA[y]
+	MIAP[r]    13 baseline
+	MDRP[stem] 10
+	MIAP[r]     4 lowHeight
+	MDRP[stem]  6
+	MIAP[r]     2 capHeight
+	IUP[y]
+}
+
+u {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem]  6
+	MIAP[r]     8 lowHeight
+	SHP[abs]    2
+	IUP[y]
+}
+
+v {
+	SVTCA[y]
+	MIAP[r]    9 baseline
+	MDRP[stem] 4
+	MIAP[r]    6 lowHeight
+	SHP[abs]   2
+	IUP[y]
+}
+
+w {
+	SVTCA[y]
+	MIAP[r]    16 baseline
+	SHP[abs]   12
+	MDRP[stem]  4
+	SHP[rel]    7
+	MIAP[r]     9 lowHeight
+	SHP[abs]    2 6 14
+	IUP[y]
+}
+
+x {
+	SVTCA[y]
+	MIAP[r]  15 baseline
+	SHP[abs] 11
+	MIAP[r]   7 lowHeight
+	SHP[abs]  3
+	SRP2     15
+	IP        1 5 9 13
+	IUP[y]
+}
+
+y {
+	SVTCA[y]
+	MIAP[r]    12 baseline
+	MDRP[stem]  4
+	MIAP[r]     6 lowHeight
+	SHP[abs]    2
+	MIAP[r]     9 descender
+	IUP[y]
+}
+
+z {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 8
+	IP         1
+	MIAP[r]    5 lowHeight
+	MDRP[stem] 3
+	IP         6
+	IUP[y]
+}
+
+braceleft {
+	SVTCA[y]
+	MIAP[r]    19 descender
+	MDRP[stem] 17
+	MIAP[r]     6 ascender
+	MDRP[stem]  8
+	SRP2       19
+	IP          0 1 12
+	IUP[y]
+}
+
+bar {
+	SVTCA[y]
+	MIAP[r] 0 descender
+	MIAP[r] 2 ascender
+	IUP[y]
+}
+
+braceright {
+	SVTCA[y]
+	MIAP[r]    22 descender
+	MDRP[stem]  1
+	MIAP[r]    12 ascender
+	MDRP[stem] 10
+	SRP2       22
+	IP          5 16 17
+	IUP[y]
+}
+
+asciitilde {
+	SVTCA[y]
+	MDAP[r]      13
+	MDRP[stem]    7
+	CALL moveFar  3
+	MDRP[stem]   17
+	SRP2         13
+	IP            0 19 9 10
+	IUP[y]
+}
+
+uni00A0 {
+}
+
+exclamdown {
+	SVTCA[y]
+	MIAP[r]       2 lowHeight
+	MIRP[grid]    4 capHeight
+	CALL movePunc 0
+	CALL moveGap  6
+	IUP[y]
+}
+
+cent {
+	SVTCA[y]
+	MIAP[r]      24 baseline
+	SHP[abs]     20
+	MDRP[stem]   17
+	CALL moveFar 22
+	MIAP[r]       8 lowHeight
+	SHP[abs]      4
+	MDRP[stem]   11
+	CALL moveFar  6
+	IUP[y]
+}
+
+sterling {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MDRP[stem] 21
+	SHP[rel]    2
+	MIAP[r]    10 capHeight
+	MDRP[stem] 13
+	CALL ipBar 17 4 0 10
+	SHP[rp1]    6
+	SHP[rp2]   19
+	IUP[y]
+}
+
+currency {
+	SVTCA[y]
+	MDAP[r]    14
+	MDRP[stem] 19
+	MDRP[GRID]  6
+	MDRP[stem] 25
+	IUP[y]
+}
+
+yen {
+	SVTCA[y]
+	MIAP[r]     16 baseline
+	MIAP[r]      5 capHeight
+	SHP[abs]     1
+
+	CALL ipGrid 21 16 5
+	SHP[abs]    10
+	MDRP[stem]   7
+	SHP[rel]    24 3
+
+	CALL moveGap 20
+	SHP[rel]     11
+	MDRP[stem]   17
+	SHP[rel]     14
+	IUP[y]
+}
+
+brokenbar {
+	SVTCA[y]
+	MIAP[r]    3 descender
+	MDRP[GRID] 1
+	MIAP[r]    6 ascender
+	MDRP[GRID] 4
+	IUP[y]
+}
+
+section {
+	SVTCA[y]
+	MIAP[r]      14 capHeight
+	MDRP[stem]   17
+	CALL moveFar 30
+	MDRP[stem]    1
+
+	SRP2     14
+	IP       20 4
+	SRP2     20
+	SHP[rp2] 38 39 9
+	SRP2      4
+	SHP[rp2] 34 35 25
+	IUP[y]
+}
+
+dieresis {
+}
+
+copyright {
+	SVTCA[y]
+	MDAP[r]      15
+	MDRP[stem]   10
+	MDRP[GAP]    40
+	MDRP[stem]   37
+	CALL moveFar 28
+	MDRP[stem]   31
+	MDRP[GAP]    21
+	MDRP[stem]    4
+	IUP[y]
+}
+
+ordfeminine {
+	SVTCA[y]
+	MIAP[r]      11 capHeight
+	MDRP[stem]    8
+	CALL moveSup 15 ordHeight
+	MDRP[stem]   20
+	CALL ipBar    4 22 15 11
+	IUP[y]
+}
+
+guillemotleft {
+}
+
+logicalnot {
+	SVTCA[y]
+	MDAP[r]    2
+	MDRP[stem] 0
+	MDRP[grid] 4
+	IUP[y]
+}
+
+uni00AD {
+}
+
+registered {
+	SVTCA[y]
+	MDAP[r]      15
+	MDRP[stem]   10
+	MDRP[GAP]    24
+	SHP[rel]     34
+	CALL moveFar 26
+	MDRP[stem]   45
+	MDRP[GAP]    21
+	MDRP[stem]    4
+	CALL ipBar   39 36 24 26
+	SHP[rp2]     31
+	IUP[y]
+}
+
+macron {
+}
+
+degree {
+	SVTCA[y]
+	MIAP[r]       4 capHeight
+	MDRP[stem]   21
+	CALL moveFar 10
+	MDRP[stem]   15
+	IUP[y]
+}
+
+plusminus {
+	SVTCA[y]
+	MIAP[r]       0 baseline
+	MDRP[stem]    2
+	CALL moveFar 10
+	SHP[rel]      6
+	MDRP[grid]    8
+	MDRP[STEM]    4
+	SHP[rel]     12
+	MDRP[grid]   14
+	IUP[y]
+}
+
+uni00B2 {
+	SVTCA[y]
+	MIAP[r]      13 capHeight
+	MDRP[stem]   10
+	CALL moveSup  0 supHeight
+	MDRP[stem]   23
+	SRP2         13
+	IP            4
+	SRP2          4
+	SHP[rp2]      3 18 19
+	IUP[y]
+}
+
+uni00B3 {
+	SVTCA[y]
+	MIAP[r]      19 capHeight
+	MDRP[stem]   16
+	CALL moveSup 32 supHeight
+	MDRP[stem]    2
+	CALL ipBar   10 8 32 19
+	IP           25
+	IUP[y]
+}
+
+acute {
+}
+
+mu {
+	SVTCA[y]
+	MIAP[r]    12 baseline
+	MDRP[stem]  4
+	MIAP[r]     8 lowHeight
+	SHP[abs]    2
+	MIAP[r]     0 descender
+	IUP[y]
+}
+
+paragraph {
+	SVTCA[y]
+	MDAP[r]     8
+	MIAP[r]    10 capHeight
+	SHP[abs]    4
+	MDRP[grid]  6
+	IUP[y]
+}
+
+periodcentered {
+}
+
+cedilla {
+}
+
+uni00B9 {
+	SVTCA[y]
+	MIAP[r]      7 capHeight
+	MDRP[stem]   4
+	CALL moveSup 0 supHeight
+	MDRP[stem]   9
+	SHP[rel]     2
+	IUP[y]
+}
+
+ordmasculine {
+	SVTCA[y]
+	MIAP[r]       4 capHeight
+	MDRP[stem]   21
+	CALL moveSup 10 ordHeight
+	MDRP[stem]   15
+	IUP[y]
+}
+
+guillemotright {
+}
+
+onequarter {
+}
+
+onehalf {
+}
+
+threequarters {
+}
+
+questiondown {
+	SVTCA[y]
+	MIAP[r]       21 lowHeight
+	CALL movePunc 19
+	CALL moveGap   6
+	SRP0          21
+	MIRP[GRID]    17 capHeight
+	MDRP[stem]    14
+	CALL ipBar     4 8 17 21
+	IUP[y]
+}
+
+Agrave {
+}
+
+Aacute {
+}
+
+Acircumflex {
+}
+
+Atilde {
+}
+
+Adieresis {
+}
+
+Aring {
+}
+
+AE {
+	SVTCA[y]
+	MIAP[r]    16 baseline
+	SHP[abs]   12
+	MDRP[stem] 10
+	MIAP[r]     2 capHeight
+	MDRP[stem] 20
+	SHP[rel]    4
+	CALL ipBar  6  8 16 2
+	CALL ipBar 18 14 16 2
+	IUP[y]
+}
+
+Ccedilla {
+}
+
+Egrave {
+}
+
+Eacute {
+}
+
+Ecircumflex {
+}
+
+Edieresis {
+}
+
+Igrave {
+}
+
+Iacute {
+}
+
+Icircumflex {
+}
+
+Idieresis {
+}
+
+Eth {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 13
+	MIAP[r]     4 capHeight
+	MDRP[stem] 19
+	CALL ipBar 21 0 10 4
+	SHP[rp1]    2
+	SHP[rp2]   23
+	IUP[y]
+}
+
+Ntilde {
+}
+
+Ograve {
+}
+
+Oacute {
+}
+
+Ocircumflex {
+}
+
+Otilde {
+}
+
+Odieresis {
+}
+
+multiply {
+	SVTCA[y]
+	RTHG
+	MDAP[r]  1
+	RTG
+	SHP[abs] 7
+	IUP[y]
+}
+
+Oslash {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 22
+	SHP[rel]   19 12
+	MIAP[r]     4 capHeight
+	MDRP[stem] 16
+	SHP[rel]   13 25
+	IUP[y]
+}
+
+Ugrave {
+}
+
+Uacute {
+}
+
+Ucircumflex {
+}
+
+Udieresis {
+}
+
+Yacute {
+}
+
+Thorn {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	MIAP[r]     2 capHeight
+	CALL ipBar  4 19 0 2
+	CALL ipBar 13 10 0 2
+	IUP[y]
+}
+
+germandbls {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]   17
+	MDRP[stem] 20
+	MIAP[r]     4 ascender
+	MDRP[stem] 34
+	SRP2        0
+	CALL ipBar 28 26 0 4
+	IP         10
+	IUP[y]
+}
+
+agrave {
+}
+
+aacute {
+}
+
+acircumflex {
+}
+
+atilde {
+}
+
+adieresis {
+}
+
+aring {
+}
+
+ae {
+	SVTCA[y]
+	MIAP[r]    32 baseline
+	SHP[abs]   27
+	MDRP[stem] 24
+	SHP[rel]   37
+	IP         29
+	MIAP[r]    16 lowHeight
+	SHP[abs]   11
+	MDRP[stem]  8
+	SHP[rel]   48
+	IP         13
+	CALL ipBar  4 41 32 16
+	CALL ipBar 45 20 32 16
+	IUP[y]
+}
+
+ccedilla {
+}
+
+egrave {
+}
+
+eacute {
+}
+
+ecircumflex {
+}
+
+edieresis {
+}
+
+igrave {
+}
+
+iacute {
+}
+
+icircumflex {
+}
+
+idieresis {
+}
+
+eth {
+	SVTCA[y]
+	MIAP[r]    21 baseline
+	MDRP[stem] 26
+	MIAP[r]    10 ascender
+	CALL ipBar  4 30 21 10
+	IP         15
+	IUP[y]
+}
+
+ntilde {
+}
+
+ograve {
+}
+
+oacute {
+}
+
+ocircumflex {
+}
+
+otilde {
+}
+
+odieresis {
+}
+
+divide {
+	SVTCA[y]
+	CALL posDash  2
+	MDRP[grid]   10
+	MDRP[STEM]    0
+	MDRP[grid]    4
+	IUP[y]
+}
+
+oslash {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 22
+	SHP[rel]   19 12
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 16
+	SHP[rel]   13 25
+	IUP[y]
+}
+
+ugrave {
+}
+
+uacute {
+}
+
+ucircumflex {
+}
+
+udieresis {
+}
+
+yacute {
+}
+
+thorn {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 13
+	MIAP[r]     4 lowHeight
+	MDRP[stem] 19
+	MIAP[r]     2 ascender
+	MIAP[r]     0 descender
+	IUP[y]
+}
+
+ydieresis {
+}
+
+Amacron {
+}
+
+amacron {
+}
+
+Abreve {
+}
+
+abreve {
+}
+
+Aogonek {
+}
+
+aogonek {
+}
+
+Cacute {
+}
+
+cacute {
+}
+
+Ccaron {
+}
+
+ccaron {
+}
+
+Dcaron {
+}
+
+dcaron {
+}
+
+Dcroat {
+}
+
+dcroat {
+	SVTCA[y]
+	MIAP[r]     16 baseline
+	MDRP[stem]  21
+	MIAP[r]      4 lowHeight
+	MDRP[stem]  23
+	MIAP[r]     10 ascender
+	CALL ipBar  12 6 4 10
+	SHP[rp1]     8
+	SHP[rp2]    14
+	IUP[y]
+}
+
+Emacron {
+}
+
+emacron {
+}
+
+Edotaccent {
+}
+
+edotaccent {
+}
+
+Eogonek {
+}
+
+eogonek {
+}
+
+Ecaron {
+}
+
+ecaron {
+}
+
+Gbreve {
+}
+
+gbreve {
+}
+
+uni0122 {
+}
+
+uni0123 {
+}
+
+Imacron {
+}
+
+imacron {
+}
+
+Iogonek {
+}
+
+iogonek {
+}
+
+Idotaccent {
+}
+
+dotlessi {
+	SVTCA[y]
+	MIAP[r] 0 baseline
+	MIAP[r] 2 lowHeight
+	IUP[y]
+}
+
+uni0136 {
+}
+
+uni0137 {
+}
+
+Lacute {
+}
+
+lacute {
+}
+
+uni013B {
+}
+
+uni013C {
+}
+
+Lcaron {
+}
+
+lcaron {
+}
+
+Lslash {
+	SVTCA[y]
+	MIAP[r]    11 baseline
+	MDRP[stem]  9
+	MIAP[r]     3 capHeight
+	SRP2       11
+	IP          1 4 7 12
+	IUP[y]
+}
+
+lslash {
+	SVTCA[y]
+	RTDG
+	MIAP[r]  11 baseline
+	RTG
+	SHP[abs] 13 8 10
+	MIAP[r]   3 ascender
+	SRP2     11
+	IP        1 4 7 14
+	IUP[y]
+}
+
+Nacute {
+}
+
+nacute {
+}
+
+uni0145 {
+}
+
+uni0146 {
+}
+
+Ncaron {
+}
+
+ncaron {
+}
+
+Omacron {
+}
+
+omacron {
+}
+
+Ohungarumlaut {
+}
+
+ohungarumlaut {
+}
+
+OE {
+	SVTCA[y]
+	MIAP[r]     14 baseline
+	MDRP[stem]  12
+	SHP[rel]    19
+	MIAP[r]      4 capHeight
+	MDRP[stem]  21
+	SHP[rel]     6
+	CALL ipBar   8 10 14 4
+	IUP[y]
+}
+
+oe
+{
+	SVTCA[y]
+	MIAP[r]    25 baseline
+	SHP[abs]   20
+	MDRP[stem] 17
+	SHP[rel]   30
+	IP         22
+	MIAP[r]     9 lowHeight
+	SHP[abs]    4
+	MDRP[stem] 36
+	SHP[rel]   44
+	IP          6
+	CALL ipBar 40 13 25 9
+	IUP[y]
+}
+
+Racute {
+}
+
+racute {
+}
+
+uni0156 {
+}
+
+uni0157 {
+}
+
+Rcaron {
+}
+
+rcaron {
+}
+
+Sacute {
+}
+
+sacute {
+}
+
+Scedilla {
+}
+
+scedilla {
+}
+
+Scaron {
+}
+
+scaron {
+}
+
+uni0162 {
+}
+
+uni0163 {
+}
+
+Tcaron {
+}
+
+tcaron {
+}
+
+Umacron {
+}
+
+umacron {
+}
+
+Uring {
+}
+
+uring {
+}
+
+Uhungarumlaut {
+}
+
+uhungarumlaut {
+}
+
+Uogonek {
+}
+
+uogonek {
+}
+
+Ydieresis {
+}
+
+Zacute {
+}
+
+zacute {
+}
+
+Zdotaccent {
+}
+
+zdotaccent {
+}
+
+Zcaron {
+}
+
+zcaron {
+}
+
+florin {
+	SVTCA[y]
+	MIAP[r]    14 lowHeight
+	MDRP[stem] 16
+	MIAP[r]     7 ascender
+	MDRP[stem] 10
+	MDAP[r]    20
+	MDRP[stem]  1
+	IUP[y]
+}
+
+uni0218 {
+}
+
+uni0219 {
+}
+
+uni021A {
+}
+
+uni021B {
+}
+
+uni0237 {
+	SVTCA[y]
+	MIAP[r]  7 descender
+	SHP[abs] 0 2 5
+	MIAP[r]  4 lowHeight
+	IUP[y]
+}
+
+circumflex {
+}
+
+caron {
+}
+
+uni02C9 {
+}
+
+breve {
+}
+
+dotaccent {
+}
+
+ring {
+}
+
+ogonek {
+}
+
+tilde {
+}
+
+hungarumlaut {
+}
+
+uni0300 {
+	SVTCA[y]
+	CALL posDiac 3 lowHeight
+	CALL moveFar 1
+	IUP[y]
+}
+
+uni0301 {
+	SVTCA[y]
+	CALL posDiac 3 lowHeight
+	CALL moveFar 1
+	IUP[y]
+}
+
+uni0302 {
+	SVTCA[y]
+	CALL posDiac 5 lowHeight
+	SHP[rel]     3
+	CALL moveFar 1
+	SRP1         5
+	IP           4
+	IUP[y]
+}
+
+uni0303 {
+	SVTCA[y]
+	CALL posDiac 13 lowHeight
+	SHP[rel]      6 0 19
+	SMD           2.0
+	CALL moveFar  3
+	SHP[rel]     16 10 9
+	IUP[y]
+}
+
+uni0304 {
+	SVTCA[y]
+	CALL posDiac 0 lowHeight
+	MDRP[stem]   2
+	IUP[y]
+}
+
+uni0306 {
+	SVTCA[y]
+	CALL posDiac 14 lowHeight
+	MDRP[stem]    6
+	CALL moveFar 10
+	SHP[rel]      2
+	IUP[y]
+}
+
+uni0307 {
+	SVTCA[y]
+	CALL posDiac 0 lowHeight
+	CALL moveFar 2
+	IUP[y]
+}
+
+uni0308 {
+	SVTCA[y]
+	CALL posDiac 0 lowHeight
+	SHP[rel]     4
+	CALL moveFar 2
+	SHP[rel]     6
+	IUP[y]
+}
+
+uni030A {
+	SVTCA[y]
+	CALL posDiac 10 lowHeight
+	MDRP[stem]   15
+	CALL moveFar  4
+	MDRP[stem]   21
+	IUP[y]
+}
+
+uni030B {
+	SVTCA[y]
+	CALL posDiac 3 lowHeight
+	SHP[rel]     7
+	CALL moveFar 1
+	SHP[rel]     5
+	IUP[y]
+}
+
+uni030C {
+	SVTCA[y]
+	CALL posDiac 5 lowHeight
+	CALL moveFar 1
+	SHP[rel]     3
+	SRP1         5
+	IP           2
+	IUP[y]
+}
+
+uni0326 {
+	SVTCA[y]
+	MDAP[r]      5
+	MDRP[GAP]    2
+	CALL moveFar 4
+	IUP[y]
+}
+
+uni0327 {
+	SVTCA[y]
+	MDAP[0]     5
+	MDAP[r]    11 # Origin
+	MDRP[GAP]   1
+	MDRP[stem]  9
+	IUP[y]
+}
+
+uni0328 {
+	SVTCA[y]
+	MIAP[r]     4 baseline
+	MDRP[stem]  2
+	MDRP[GAP]  11
+	MDRP[stem] 14
+	IUP[y]
+}
+
+pi {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	SHP[abs]   4
+	MIAP[r]    2 lowHeight
+	MDRP[stem] 6
+	IUP[y]
+}
+
+uni1E9E {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]   13
+	MDRP[stem] 16
+	MIAP[r]     4 capHeight
+	MDRP[stem] 25
+	IP          5
+	CALL ipBar  7 22 0 4
+	SHP[rp1]   23
+	IUP[y]
+}
+
+endash {
+	SVTCA[y]
+	CALL posDash 2
+	MDRP[stem]   0
+	IUP[y]
+}
+
+emdash {
+	SVTCA[y]
+	CALL posDash 2
+	MDRP[stem]   0
+	IUP[y]
+}
+
+quoteleft {
+	SVTCA[y]
+	MIAP[r]      1 ascender
+	CALL moveFar 4
+	IUP[y]
+}
+
+quoteright {
+	SVTCA[y]
+	MIAP[r]      2 ascender
+	CALL moveFar 4
+	IUP[y]
+}
+
+quotesinglbase {
+	SVTCA[y]
+	MDAP[r]       5
+	CALL movePunc 2
+	CALL moveFar  4
+	IUP[y]
+}
+
+quotedblleft {
+}
+
+quotedblright {
+}
+
+quotedblbase {
+}
+
+dagger {
+	SVTCA[y]
+	MDAP[r]    10
+	MIAP[r]     4 capHeight
+	CALL ipBar  6 0 10 4
+	SHP[rp1]    2
+	SHP[rp2]    8
+	IUP[y]
+}
+
+daggerdbl {
+	SVTCA[y]
+	MDAP[r]    18
+	MIAP[r]     8 capHeight
+	CALL ipBar 10 4 18 8
+	SHP[rp1]    6
+	SHP[rp2]   12
+	CALL ipBar 14 0 18 8
+	SHP[rp1]    2
+	SHP[rp2]   16
+	IUP[y]
+}
+
+bullet {
+	SVTCA[y]
+	MDAP[r]      0
+	CALL moveFar 2
+	IUP[y]
+}
+
+ellipsis {
+}
+
+perthousand {
+}
+
+guilsinglleft {
+	SVTCA[y]
+	RTHG
+	MDAP[r] 0
+	RTG
+	IUP[y]
+}
+
+guilsinglright {
+	SVTCA[y]
+	RTHG
+	MDAP[r] 4
+	RTG
+	IUP[y]
+}
+
+fraction {
+	SVTCA[y]
+	MIAP[r] 3 baseline
+	MIAP[r] 1 capHeight
+	IUP[y]
+}
+
+uni2070 {
+	SVTCA[y]
+	MIAP[r]       4 capHeight
+	MDRP[stem]   21
+	CALL moveSup 10 supHeight
+	MDRP[stem]   15
+	IUP[y]
+}
+
+uni2074 {
+	SVTCA[y]
+	MIAP[r]       3 capHeight
+	CALL moveSup 10 supHeight
+	CALL ipGrid   8 10 3
+	CALL ipBar    6 0 10 3
+	SHP[rp1]      1
+	IUP[y]
+}
+
+uni2080 {
+	# Note, MIAP[r] does not work. Referenced outlines
+	# seem to be moved from their instructed positions,
+	# and the CVT cut-in may prevent correct alignment.
+
+	SVTCA[y]
+	SRP0     24 # Origin
+	ALIGNRP  10
+	SRP1     10
+	SHC[rp1]  0
+	SHC[rp1]  1
+}
+
+uni2081 {
+	SVTCA[y]
+	SRP0     11 # Origin
+	ALIGNRP   0
+	SRP1      0
+	SHC[rp1]  0
+}
+
+uni2082 {
+	SVTCA[y]
+	SRP0     25 # Origin
+	ALIGNRP   0
+	SRP1      0
+	SHC[rp1]  0
+}
+
+uni2083 {
+	SVTCA[y]
+	SRP0     33 # Origin
+	ALIGNRP  32
+	SRP1     32
+	SHC[rp1]  0
+}
+
+uni2084 {
+	SVTCA[y]
+	SRP0     12 # Origin
+	ALIGNRP  10
+	SRP1     10
+	SHC[rp1]  0
+}
+
+Euro {
+	SVTCA[y]
+	MIAP[r]    30 baseline
+	MDRP[stem] 27
+	MIAP[r]    10 capHeight
+	MDRP[stem] 13
+
+	CALL ipGrid  4 30 10
+	SHP[abs]    19
+	MDRP[stem]  17
+	SHP[rel]     6
+
+	CALL moveGap 21
+	SHP[rel]      2
+	MDRP[stem]    0
+	SHP[rel]     23
+	IUP[y]
+}
+
+uni20BA {
+	SVTCA[y]
+	MIAP[r]    25 baseline
+	MDRP[stem] 17
+	MIAP[r]     7 capHeight
+	SRP2       25
+	IP          5 8 1 12 21
+	MDAP[r]    21
+	IUP[y]
+}
+
+uni20BD {
+	SVTCA[y]
+	MIAP[r]     20 baseline
+	MIAP[r]      8 capHeight
+	MDRP[stem]  29
+
+	CALL ipGrid  4 20 8
+	SHP[abs]    14
+	MDRP[stem]  23
+	SHP[rel]     6
+
+	CALL moveGap 16
+	SHP[rel]      2
+	MDRP[stem]    0
+	SHP[rel]     18
+	IUP[y]
+}
+
+uni2113 {
+}
+
+trademark {
+	SVTCA[y]
+	MIAP[r]       2 capHeight
+	SHP[abs]     10 13
+	MDRP[stem]    0
+	SHP[rel]      4
+	CALL moveFar  6
+	SHP[rel]      8 15
+	SRP1          2
+	IP           11 18 16 19
+	IUP[y]
+}
+
+Omega {
+	SVTCA[y]
+	MIAP[r]     0 baseline
+	SHP[abs]   18
+	MDRP[stem] 16
+	SHP[rel]    2
+	IP         19 32
+	MIAP[r]     9 capHeight
+	MDRP[stem] 26
+	IUP[y]
+}
+
+estimated {
+	SVTCA[y]
+	MIAP[r]    15 baseline
+	MDRP[stem] 10
+	MIAP[r]     3 capHeight
+	MDRP[stem] 21
+	CALL ipBar 18 7 15 3
+	IUP[y]
+}
+
+partialdiff {
+	SVTCA[y]
+	MIAP[r]    17 baseline
+	MDRP[stem] 22
+	MIAP[r]    11 ascender
+	MDRP[stem]  8
+	CALL ipBar  4 26 17 11
+	IUP[y]
+}
+
+Delta {
+	SVTCA[y]
+	MIAP[r]    5 baseline
+	MDRP[stem] 7
+	MIAP[r]    2 capHeight
+	MDRP[stem] 9
+	IUP[y]
+}
+
+product {
+	SVTCA[y]
+	MIAP[r]    2 capHeight
+	MDRP[stem] 6
+	MDAP[r]    0
+	SHP[abs]   4
+	IUP[y]
+}
+
+summation {
+	SVTCA[y]
+	MDAP[r]    11
+	MDRP[stem]  9
+	IP          0
+	MIAP[r]     4 capHeight
+	MDRP[stem]  6
+	IP          2
+	IUP[y]
+}
+
+minus {
+	SVTCA[y]
+	CALL posDash 2
+	MDRP[stem]   0
+	IUP[y]
+}
+
+uni2215 {
+}
+
+uni2219 {
+}
+
+radical {
+	SVTCA[y]
+	MIAP[r]    7 baseline
+	SHP[abs]   3
+	MDAP[r]    2
+	MDRP[stem] 0
+	MDAP       4
+	IUP[y]
+}
+
+infinity {
+	SVTCA[y]
+	MDAP[r]    24
+	SHP[abs]   17
+	MDRP[stem] 41
+	SHP[rel]   29
+	IP         20
+
+	CALL moveFar 11
+	SHP[rel]      4
+	MDRP[stem]   35
+	SHP[rel]     47
+	IP            7
+	IUP[y]
+}
+
+integral {
+	SVTCA[y]
+	MIAP[r]     7 ascender
+	MDRP[stem] 10
+	MIAP[r]    16 descender
+	MDRP[stem]  1
+	IUP[y]
+}
+
+approxequal {
+}
+
+notequal {
+	SVTCA[y]
+	MDAP[r]    14
+	SHP[abs]    2
+	MDRP[stem]  0
+	SHP[rel]   16
+	MDRP[GRID] 10
+	SHP[rel]    6
+	MDRP[stem]  4
+	SHP[rel]   12
+	IUP[y]
+}
+
+lessequal {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 2
+	RTHG
+	MDAP[r]    8
+	RTG
+	IUP[y]
+}
+
+greaterequal {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 2
+	RTHG
+	MDAP[r]    5
+	RTG
+	IUP[y]
+}
+
+lozenge {
+	SVTCA[y]
+	MIAP[r]  5 baseline
+	SHP[abs] 7
+	MIAP[r]  2 capHeight
+	SHP[abs] 9
+	IUP[y]
+}
+
+uniF000 {
+	SVTCA[y]
+	MDAP[r] 2
+	ALIGNRP 0
+	MDAP[r] 1
+	ALIGNRP 2
+	SRP0    0
+	ALIGNRP 1
+}
+
+uniFB01 {
+}
+
+uniFB02 {
+}
+
+.notdef {
+	SVTCA[y]
+	MIAP[r]    0 baseline
+	MDRP[stem] 5
+	MIAP[r]    2 capHeight
+	MDRP[stem] 7
+	IUP[y]
+}
+
+uni030C.alt {
+	SVTCA[y]
+	MDAP[r]      4
+	CALL moveFar 2
+	IUP[y]
+}
+
+uni0326.alt {
+	SVTCA[y]
+	MDAP[r]      4
+	CALL moveFar 1
+	IUP[y]
+}
+
+uni0300.cap {
+	SVTCA[y]
+	CALL posDiac 3 capHeight
+	CALL moveFar 1
+	IUP[y]
+}
+
+uni0301.cap {
+	SVTCA[y]
+	CALL posDiac 3 capHeight
+	CALL moveFar 1
+	IUP[y]
+}
+
+uni0302.cap {
+	SVTCA[y]
+	CALL posDiac 5 capHeight
+	SHP[rel]     3
+	CALL moveFar 1
+	SRP1         5
+	IP           4
+	IUP[y]
+}
+
+uni0303.cap {
+	SVTCA[y]
+	CALL posDiac 13 capHeight
+	SHP[rel]      6 0 19
+	SMD           2.0
+	CALL moveFar  3
+	SHP[rel]     16 10 9
+	IUP[y]
+}
+
+uni0304.cap {
+	SVTCA[y]
+	CALL posDiac 0 capHeight
+	MDRP[stem]   2
+	IUP[y]
+}
+
+uni0306.cap {
+	SVTCA[y]
+	CALL posDiac 14 capHeight
+	MDRP[stem]    6
+	CALL moveFar 10
+	SHP[rel]      2
+	IUP[y]
+}
+
+uni0307.cap {
+	SVTCA[y]
+	CALL posDiac 0 capHeight
+	CALL moveFar 2
+	IUP[y]
+}
+
+uni0308.cap {
+	SVTCA[y]
+	CALL posDiac 0 capHeight
+	SHP[rel]     4
+	CALL moveFar 2
+	SHP[rel]     6
+	IUP[y]
+}
+
+uni030A.cap {
+	SVTCA[y]
+	CALL posDiac 10 capHeight
+	MDRP[stem]   15
+	CALL moveFar  4
+	MDRP[stem]   21
+	IUP[y]
+}
+
+uni030B.cap {
+	SVTCA[y]
+	CALL posDiac 3 capHeight
+	SHP[rel]     7
+	CALL moveFar 1
+	SHP[rel]     5
+	IUP[y]
+}
+
+uni030C.cap {
+	SVTCA[y]
+	CALL posDiac 5 capHeight
+	CALL moveFar 1
+	SHP[rel]     3
+	SRP1         5
+	IP           2
+	IUP[y]
+}
+
+zero.zero {
+	SVTCA[y]
+	MIAP[r]    10 baseline
+	MDRP[stem] 15
+	MIAP[r]     4 capHeight
+	MDRP[stem] 21
+	CALL ipBar 26 24 10 4
+	IUP[y]
+}
+
+one.pnum {
+}
+
+four.pnum {
+}
+
+seven.pnum {
+}

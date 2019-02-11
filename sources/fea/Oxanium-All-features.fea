@@ -1,0 +1,265 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+
+feature ccmp {
+	# Use cap variant of combining diacritics.
+
+		sub @baseCap @combAbove' by @combAboveCap;
+
+	# Remove tittle if followed by a combining diacritic.
+
+		sub i' @combAbove by dotlessi;
+		sub j' @combAbove by uni0237;
+
+	# Use precomposed glyphs to align ogonek to the right.
+
+		sub A uni0328 by Aogonek;
+		sub a uni0328 by aogonek;
+		sub E uni0328 by Eogonek;
+		sub e uni0328 by eogonek;
+		sub I uni0328 by Iogonek;
+		sub i uni0328 by iogonek;
+		sub U uni0328 by Uogonek;
+		sub u uni0328 by uogonek;
+} ccmp;
+
+
+feature pnum {
+	sub one by one.pnum;
+	sub four by four.pnum;
+	sub seven by seven.pnum;
+} pnum;
+
+
+feature zero {
+	sub zero by zero.zero;
+} zero;
+
+
+feature kern {
+	# Some classes only need a few kern adjustments.
+	# Adding them to the class kerning subtable would
+	# add mostly empty rows and columns. To minimize the
+	# font size, they are listed as specific pairs instead.
+
+	# Collisions
+
+		enum pos underscore   @_j 40;
+		enum pos questiondown @_j 70;
+
+		enum pos @C_ @_ii 20;
+
+	# pnum
+
+		enum pos one.pnum @_puncAbove -40;
+		enum pos one.pnum @_backslash -70;
+
+		enum pos @puncAbove_  one.pnum -20;
+		enum pos @puncMiddle_ one.pnum -20;
+		enum pos @slash_      one.pnum -20;
+
+		enum pos @puncAbove_ four.pnum -50;
+		enum pos @puncBelow_ four.pnum -20;
+		enum pos @bracket_   four.pnum -40;
+		enum pos @slash_     four.pnum -50;
+
+		enum pos seven.pnum four.pnum   -50;
+		enum pos seven.pnum @_puncBelow -50;
+
+		enum pos @puncBelow_  seven.pnum -40;
+		enum pos @puncMiddle_ seven.pnum -30;
+
+	# End of specific pairs
+	subtable;
+	# Start of class kerning table
+
+	# Punctuation - Punctuation
+
+		pos @puncAbove_ @_puncBelow -50;
+		pos @puncBelow_ @_puncAbove -50;
+		pos @puncBelow_ @_backslash -60;
+		pos @slash_     @_puncBelow -60;
+
+	# Punctuation - Letter
+
+		pos @puncAbove_ @_A -40;
+		pos @puncAbove_ @_J -50;
+		pos @puncAbove_ @_a -20;
+		pos @puncAbove_ @_c -10;
+		pos @puncAbove_ @_ii 40;
+
+		pos @puncBelow_ @_T -80;
+		pos @puncBelow_ @_V -60;
+		pos @puncBelow_ @_W -40;
+		pos @puncBelow_ @_v -20;
+
+		pos @puncMiddle_ @_T -50;
+		pos @puncMiddle_ @_V -20;
+		pos @puncMiddle_ @_X -30;
+
+		pos @slash_ @_A -60;
+		pos @slash_ @_J -50;
+		pos @slash_ @_a -30;
+		pos @slash_ @_c -20;
+		pos @slash_ @_m -10;
+		pos @slash_ @_ii 50;
+
+		pos @bracket_ @_T  20;
+		pos @bracket_ @_V  10;
+		pos @bracket_ @_j  50;
+		pos @bracket_ @_ii 60;
+		pos @bracket_ @_bracket 50;
+
+	# Letter - Punctuation
+
+		pos @A_  @_puncAbove -40;
+		pos @L_  @_puncAbove -50;
+		pos @SS_ @_puncAbove -20;
+		pos @a_  @_puncAbove -10;
+		pos @l_  @_puncAbove -10;
+		pos @f_  @_puncAbove  20;
+		pos @ii_ @_puncAbove  40;
+
+		pos @F_ @_puncBelow -50;
+		pos @P_ @_puncBelow -70;
+		pos @T_ @_puncBelow -80;
+		pos @V_ @_puncBelow -60;
+		pos @W_ @_puncBelow -40;
+		pos @f_ @_puncBelow -60;
+		pos @r_ @_puncBelow -60;
+		pos @v_ @_puncBelow -20;
+
+		pos @K_ @_puncMiddle -40;
+		pos @T_ @_puncMiddle -50;
+		pos @V_ @_puncMiddle -20;
+		pos @X_ @_puncMiddle -30;
+
+		pos @A_  @_backslash -60;
+		pos @L_  @_backslash -80;
+		pos @SS_ @_backslash -20;
+		pos @a_  @_backslash -20;
+		pos @f_  @_backslash  20;
+		pos @ii_ @_backslash  50;
+
+		pos @T_  @_bracket 20;
+		pos @V_  @_bracket 10;
+		pos @f_  @_bracket 30;
+		pos @ii_ @_bracket 60;
+
+	# UPPERCASE - UPPERCASE
+
+		pos @A_ @_T -50;
+		pos @A_ @_V -40;
+		pos @A_ @_W -30;
+
+		pos @F_ @_A -20;
+		pos @F_ @_J -20;
+
+		pos @L_ @_T -90;
+		pos @L_ @_V -60;
+		pos @L_ @_W -40;
+
+		pos @P_ @_A -40;
+		pos @P_ @_J -20;
+
+		pos @T_ @_A -50;
+		pos @T_ @_J -60;
+
+		pos @V_ @_A -40;
+		pos @V_ @_J -50;
+
+		pos @W_ @_A -30;
+		pos @W_ @_J -40;
+
+		pos @SS_ @_T -30;
+		pos @SS_ @_V -20;
+		pos @SS_ @_W -20;
+
+	# UPPERCASE - lowercase
+
+		pos @A_ @_v -20;
+		pos @A_ @_w -10;
+
+		pos @F_ @_a -20;
+		pos @F_ @_x -10;
+		pos @F_ @_ii 40;
+
+		pos @K_ @_v -30;
+		pos @K_ @_w -20;
+
+		pos @L_ @_v -30;
+		pos @L_ @_w -20;
+
+		pos @P_ @_a -20;
+
+		pos @T_ @_a -50;
+		pos @T_ @_c -40;
+		pos @T_ @_m -30;
+		pos @T_ @_v -10;
+		pos @T_ @_w -10;
+		pos @T_ @_x -30;
+		pos @T_ @_ii 50;
+
+		pos @V_ @_a -40;
+		pos @V_ @_c -30;
+		pos @V_ @_m -20;
+		pos @V_ @_x -10;
+		pos @V_ @_ii 50;
+
+		pos @W_ @_a -30;
+		pos @W_ @_c -20;
+		pos @W_ @_m -10;
+		pos @W_ @_ii 40;
+
+		pos @X_ @_v -20;
+		pos @X_ @_w -10;
+		pos @X_ @_ii 30;
+
+	# lowercase - UPPERCASE
+
+		pos @a_ @_T -40;
+		pos @a_ @_V -30;
+		pos @a_ @_W -20;
+
+		pos @f_ @_A -30;
+		pos @f_ @_J -10;
+
+		pos @g_ @_T -30;
+		pos @g_ @_V -20;
+		pos @g_ @_W -10;
+
+		pos @k_ @_T -30;
+		pos @k_ @_V -10;
+
+		pos @l_ @_T -10;
+		pos @l_ @_V -10;
+		pos @l_ @_W -10;
+
+		pos @r_ @_A -30;
+		pos @r_ @_J -10;
+		pos @r_ @_X -10;
+
+		pos @v_ @_A -20;
+		pos @v_ @_T -10;
+		pos @v_ @_X -20;
+
+		pos @w_ @_A -10;
+		pos @w_ @_T -10;
+		pos @w_ @_X -10;
+
+		pos @ii_ @_T 50;
+		pos @ii_ @_V 50;
+		pos @ii_ @_W 40;
+		pos @ii_ @_X 30;
+
+	# lowercase - lowercase
+
+		pos @f_ @_a -10;
+		pos @f_ @_ii 40;
+		pos @l_ @_v -10;
+		pos @r_ @_a -10;
+		pos @v_ @_a -10;
+		pos @w_ @_a -10;
+
+} kern;
