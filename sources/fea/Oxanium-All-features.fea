@@ -59,13 +59,13 @@ feature kern {
 		enum pos @puncMiddle_ one.pnum -20;
 		enum pos @slash_      one.pnum -20;
 
-		enum pos @puncAbove_ four.pnum -50;
+		enum pos @puncAbove_ four.pnum -60;
 		enum pos @puncBelow_ four.pnum -20;
 		enum pos @bracket_   four.pnum -40;
-		enum pos @slash_     four.pnum -50;
+		enum pos @slash_     four.pnum -70;
 
 		enum pos seven.pnum four.pnum   -50;
-		enum pos seven.pnum @_puncBelow -50;
+		enum pos seven.pnum @_puncBelow -70;
 
 		enum pos @puncBelow_  seven.pnum -40;
 		enum pos @puncMiddle_ seven.pnum -30;
