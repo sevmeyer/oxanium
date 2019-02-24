@@ -21,6 +21,8 @@ cvt {
 	 390 ordHeight
 	 740 ascender
 	-200 descender
+	 760 brackTop
+	-180 brackBot
 }
 
 flags {

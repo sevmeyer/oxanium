@@ -31,6 +31,7 @@ prep {
 		deltac ordHeight 10+2 13+1 18+1           # Threshold=7/8
 		deltac ascender  10+1 14+2 16+6 18+2 25-1
 		deltac descender 12-1 17-1 22-1
+		deltac brackTop  16+3
 
 	# Use smart dropout control.
 

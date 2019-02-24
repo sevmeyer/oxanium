@@ -2,7 +2,7 @@
 # optimize compression. The order is based on personal preference.
 # Take with a grain of salt.
 #
-# Point order
+# RP0 order
 #
 #  Start on bottom left
 #  Favor an even distribution of touched points
@@ -99,15 +99,15 @@ quotesingle {
 
 parenleft {
 	SVTCA[y]
-	MIAP[r] 2 ascender
-	MIAP[r] 7 descender
+	MIAP[r] 7 brackBot
+	MIAP[r] 2 brackTop
 	IUP[y]
 }
 
 parenright {
 	SVTCA[y]
-	MIAP[r] 4 ascender
-	MIAP[r] 7 descender
+	MIAP[r] 7 brackBot
+	MIAP[r] 4 brackTop
 	IUP[y]
 }
 
@@ -578,9 +578,9 @@ Z {
 
 bracketleft {
 	SVTCA[y]
-	MIAP[r]    0 descender
+	MIAP[r]    0 brackBot
 	MDRP[stem] 6
-	MIAP[r]    2 ascender
+	MIAP[r]    2 brackTop
 	MDRP[stem] 4
 	IUP[y]
 }
@@ -594,9 +594,9 @@ backslash {
 
 bracketright {
 	SVTCA[y]
-	MIAP[r]    7 descender
+	MIAP[r]    7 brackBot
 	MDRP[stem] 1
-	MIAP[r]    5 ascender
+	MIAP[r]    5 brackTop
 	MDRP[stem] 2
 	IUP[y]
 }
@@ -882,9 +882,9 @@ z {
 
 braceleft {
 	SVTCA[y]
-	MIAP[r]    19 descender
+	MIAP[r]    19 brackBot
 	MDRP[stem] 17
-	MIAP[r]     6 ascender
+	MIAP[r]     6 brackTop
 	MDRP[stem]  8
 	SRP2       19
 	IP          0 1 12
@@ -900,9 +900,9 @@ bar {
 
 braceright {
 	SVTCA[y]
-	MIAP[r]    22 descender
+	MIAP[r]    22 brackBot
 	MDRP[stem]  1
-	MIAP[r]    12 ascender
+	MIAP[r]    12 brackTop
 	MDRP[stem] 10
 	SRP2       22
 	IP          5 16 17
