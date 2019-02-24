@@ -620,11 +620,11 @@ grave {
 
 a {
 	SVTCA[y]
-	MIAP[r]    15 baseline
-	MDRP[stem] 20
+	MIAP[r]     0 baseline
+	MDRP[stem] 18
 	MIAP[r]    11 lowHeight
 	MDRP[stem]  8
-	CALL ipBar  4 22 15 11
+	CALL ipBar  4 20 0 11
 	IUP[y]
 }
 
@@ -1350,18 +1350,18 @@ aring {
 
 ae {
 	SVTCA[y]
-	MIAP[r]    32 baseline
+	MIAP[r]     0 baseline
 	SHP[abs]   27
 	MDRP[stem] 24
-	SHP[rel]   37
+	SHP[rel]   35
 	IP         29
 	MIAP[r]    16 lowHeight
 	SHP[abs]   11
 	MDRP[stem]  8
-	SHP[rel]   48
+	SHP[rel]   47
 	IP         13
-	CALL ipBar  4 41 32 16
-	CALL ipBar 45 20 32 16
+	CALL ipBar  4 39 0 16
+	CALL ipBar 43 20 0 16
 	IUP[y]
 }
 
@@ -1667,8 +1667,7 @@ OE {
 	IUP[y]
 }
 
-oe
-{
+oe {
 	SVTCA[y]
 	MIAP[r]    25 baseline
 	SHP[abs]   20
