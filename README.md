@@ -1,8 +1,8 @@
 Oxanium
 =======
 
-This is the source repository for the Oxanium font family.
-TODO links
+This is the source repository for the
+[Oxanium font family](https://sev.dev/fonts/oxanium).
 
 
 Build

@@ -1,5 +1,5 @@
 Oxanium font family
-https://TODO/fonts/oxanium
+https://sev.dev/fonts/oxanium
 
 
 Weights
@@ -44,11 +44,11 @@ U+0327  Combining cedilla
 U+0328  Combining ogonek
 
 U+1E9E  Capital Eszett
-U+F000  Hinting debug glyph
+U+F000  TrueType hinting marker (up=on, down=off)
 
 
 Changelog
 ---------
 
-Oxanium 1.000  2019-TODO  Severin Meyer  hello@TODO
+Oxanium 1.000  2019-TODO  Severin Meyer  hello@sev.dev
   Initial release
