@@ -2294,17 +2294,17 @@ radical {
 
 infinity {
 	SVTCA[y]
-	MDAP[r]    24
-	SHP[abs]   17
-	MDRP[stem] 41
-	SHP[rel]   29
-	IP         20
+	MDAP[r]    20
+	SHP[abs]   15
+	MDRP[stem] 37
+	SHP[rel]   25
+	IP         17
 
-	CALL moveFar 11
+	CALL moveFar  9
 	SHP[rel]      4
-	MDRP[stem]   35
-	SHP[rel]     47
-	IP            7
+	MDRP[stem]   31
+	SHP[rel]     43
+	IP            6
 	IUP[y]
 }
 
