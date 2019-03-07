@@ -2222,11 +2222,11 @@ Omega {
 
 estimated {
 	SVTCA[y]
-	MIAP[r]    15 baseline
-	MDRP[stem] 10
+	MIAP[r]    13 baseline
+	MDRP[stem]  9
 	MIAP[r]     3 capHeight
-	MDRP[stem] 21
-	CALL ipBar 18 7 15 3
+	MDRP[stem] 18
+	CALL ipBar 15 6 13 3
 	IUP[y]
 }
 
