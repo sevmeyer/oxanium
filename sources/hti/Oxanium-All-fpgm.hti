@@ -87,12 +87,13 @@ fpgm {
 		MDAP[r]
 	ENDF
 
-	# Interpolates crossbar and snaps either the top
-	# or bottom to the grid as accurately as possible.
+	# Interpolates bar and snaps either the top or
+	# bottom to the grid as accurately as possible.
 	# Returns with rp1=ptBarTop and rp2=ptBarBottom.
 	void 7 ipBar ptBarTop ptBarBottom ptRef1 ptRef2
 		SRP2
 		SRP1
+		# Stack: T B
 
 		# Copy the points for later.
 		DUP
@@ -101,8 +102,8 @@ fpgm {
 		ROLL
 		# B T T B
 
-		# Interpolate crossbar points. This stretches
-		# the crossbar and needs to be corrected below.
+		# Interpolate bar points. This stretches
+		# the bar and needs to be corrected below.
 		DUP
 		IP
 		SWAP
@@ -118,7 +119,7 @@ fpgm {
 		ALIGNPTS
 		# B T T B
 
-		# Compute half of the original crossbar height.
+		# Compute half of the original bar height.
 		DUP
 		ROLL
 		DUP

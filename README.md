@@ -12,18 +12,23 @@ The fonts can be compiled with the provided Makefile,
 which runs the scripts from the `tools` directory:
 
 ```
-make all     Compile all fonts
-make clean   Delete generated files and directories
+make all
 ```
 
-Each font can be compiled individually as well:
+Fonts can be compiled individually as well:
 
 ```
 make fonts/ttf/Oxanium-Regular.ttf
 ```
 
-FontForge might complain about non-BMP kern pairs.
-These are fixed during the build process.
+The generated files can be deleted with:
+
+```
+make clean
+```
+
+FontForge might complain about non-BMP kern pairs,
+these are fixed during the build process.
 
 
 Dependencies
