@@ -1836,21 +1836,21 @@ hungarumlaut {
 
 uni0300 {
 	SVTCA[y]
-	CALL posDiac 3 lowHeight
+	CALL posDiac 3 lowHeight lowHeightOrig
 	CALL moveFar 1
 	IUP[y]
 }
 
 uni0301 {
 	SVTCA[y]
-	CALL posDiac 3 lowHeight
+	CALL posDiac 3 lowHeight lowHeightOrig
 	CALL moveFar 1
 	IUP[y]
 }
 
 uni0302 {
 	SVTCA[y]
-	CALL posDiac 5 lowHeight
+	CALL posDiac 5 lowHeight lowHeightOrig
 	SHP[rel]     3
 	CALL moveFar 1
 	SRP1         5
@@ -1860,7 +1860,7 @@ uni0302 {
 
 uni0303 {
 	SVTCA[y]
-	CALL posDiac 13 lowHeight
+	CALL posDiac 13 lowHeight lowHeightOrig
 	SHP[rel]      6 0 19
 	SMD           2.0
 	CALL moveFar  3
@@ -1870,14 +1870,14 @@ uni0303 {
 
 uni0304 {
 	SVTCA[y]
-	CALL posDiac 0 lowHeight
+	CALL posDiac 0 lowHeight lowHeightOrig
 	MDRP[stem]   2
 	IUP[y]
 }
 
 uni0306 {
 	SVTCA[y]
-	CALL posDiac 14 lowHeight
+	CALL posDiac 14 lowHeight lowHeightOrig
 	MDRP[stem]    6
 	CALL moveFar 10
 	SHP[rel]      2
@@ -1886,14 +1886,14 @@ uni0306 {
 
 uni0307 {
 	SVTCA[y]
-	CALL posDiac 0 lowHeight
+	CALL posDiac 0 lowHeight lowHeightOrig
 	CALL moveFar 2
 	IUP[y]
 }
 
 uni0308 {
 	SVTCA[y]
-	CALL posDiac 0 lowHeight
+	CALL posDiac 0 lowHeight lowHeightOrig
 	SHP[rel]     4
 	CALL moveFar 2
 	SHP[rel]     6
@@ -1902,7 +1902,7 @@ uni0308 {
 
 uni030A {
 	SVTCA[y]
-	CALL posDiac 10 lowHeight
+	CALL posDiac 10 lowHeight lowHeightOrig
 	MDRP[stem]   15
 	CALL moveFar  4
 	MDRP[stem]   21
@@ -1911,7 +1911,7 @@ uni030A {
 
 uni030B {
 	SVTCA[y]
-	CALL posDiac 3 lowHeight
+	CALL posDiac 3 lowHeight lowHeightOrig
 	SHP[rel]     7
 	CALL moveFar 1
 	SHP[rel]     5
@@ -1920,7 +1920,7 @@ uni030B {
 
 uni030C {
 	SVTCA[y]
-	CALL posDiac 5 lowHeight
+	CALL posDiac 5 lowHeight lowHeightOrig
 	CALL moveFar 1
 	SHP[rel]     3
 	SRP1         5
@@ -2403,21 +2403,21 @@ uni0326.alt {
 
 uni0300.cap {
 	SVTCA[y]
-	CALL posDiac 3 capHeight
+	CALL posDiac 3 capHeight capHeightOrig
 	CALL moveFar 1
 	IUP[y]
 }
 
 uni0301.cap {
 	SVTCA[y]
-	CALL posDiac 3 capHeight
+	CALL posDiac 3 capHeight capHeightOrig
 	CALL moveFar 1
 	IUP[y]
 }
 
 uni0302.cap {
 	SVTCA[y]
-	CALL posDiac 5 capHeight
+	CALL posDiac 5 capHeight capHeightOrig
 	SHP[rel]     3
 	CALL moveFar 1
 	SRP1         5
@@ -2427,7 +2427,7 @@ uni0302.cap {
 
 uni0303.cap {
 	SVTCA[y]
-	CALL posDiac 13 capHeight
+	CALL posDiac 13 capHeight capHeightOrig
 	SHP[rel]      6 0 19
 	SMD           2.0
 	CALL moveFar  3
@@ -2437,14 +2437,14 @@ uni0303.cap {
 
 uni0304.cap {
 	SVTCA[y]
-	CALL posDiac 0 capHeight
+	CALL posDiac 0 capHeight capHeightOrig
 	MDRP[stem]   2
 	IUP[y]
 }
 
 uni0306.cap {
 	SVTCA[y]
-	CALL posDiac 14 capHeight
+	CALL posDiac 14 capHeight capHeightOrig
 	MDRP[stem]    6
 	CALL moveFar 10
 	SHP[rel]      2
@@ -2453,14 +2453,14 @@ uni0306.cap {
 
 uni0307.cap {
 	SVTCA[y]
-	CALL posDiac 0 capHeight
+	CALL posDiac 0 capHeight capHeightOrig
 	CALL moveFar 2
 	IUP[y]
 }
 
 uni0308.cap {
 	SVTCA[y]
-	CALL posDiac 0 capHeight
+	CALL posDiac 0 capHeight capHeightOrig
 	SHP[rel]     4
 	CALL moveFar 2
 	SHP[rel]     6
@@ -2469,7 +2469,7 @@ uni0308.cap {
 
 uni030A.cap {
 	SVTCA[y]
-	CALL posDiac 10 capHeight
+	CALL posDiac 10 capHeight capHeightOrig
 	MDRP[stem]   15
 	CALL moveFar  4
 	MDRP[stem]   21
@@ -2478,7 +2478,7 @@ uni030A.cap {
 
 uni030B.cap {
 	SVTCA[y]
-	CALL posDiac 3 capHeight
+	CALL posDiac 3 capHeight capHeightOrig
 	SHP[rel]     7
 	CALL moveFar 1
 	SHP[rel]     5
@@ -2487,7 +2487,7 @@ uni030B.cap {
 
 uni030C.cap {
 	SVTCA[y]
-	CALL posDiac 5 capHeight
+	CALL posDiac 5 capHeight capHeightOrig
 	CALL moveFar 1
 	SHP[rel]     3
 	SRP1         5

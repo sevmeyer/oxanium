@@ -47,10 +47,9 @@ fpgm {
 
 	# Positions bottom of diacritic on the grid, relative to a
 	# snapped base control value. The distance is at least 1px.
-	void 5 posDiac ptDiac cvtBase
+	void 5 posDiac ptDiac cvtBase cvtBaseOrig
 		# Calculate original distance.
-		DUP
-		RCVT # cvtBase
+		RCVT # cvtBaseOrig
 		ROLL
 		DUP
 		GC[orig] # ptDiac
@@ -58,7 +57,10 @@ fpgm {
 		SUB
 
 		# Adjust distance.
+		push 0b01000111 # Period=1 Phase=0 Threshold=3/8
+		SROUND
 		ROUND
+		RTG
 		push 1.0 # Minimum
 		MAX
 

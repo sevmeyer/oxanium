@@ -23,6 +23,18 @@ cvt {
 	-200 descender
 	 760 brackTop
 	-180 brackBot
+
+	# The following values are used to
+	# calculate the placement of diacritics.
+
+	              690 capHeightOrig
+	#ifExtraLight 515 lowHeightOrig
+	#ifLight      518 lowHeightOrig
+	#ifRegular    520 lowHeightOrig
+	#ifMedium     522 lowHeightOrig
+	#ifSemiBold   525 lowHeightOrig
+	#ifBold       528 lowHeightOrig
+	#ifExtraBold  532 lowHeightOrig
 }
 
 flags {
