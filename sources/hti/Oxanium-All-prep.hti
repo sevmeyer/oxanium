@@ -25,13 +25,13 @@ prep {
 
 	# Adjust control values.
 
-		deltac capHeight  9+3 10+5 12+2 13+5 15+2 16+4 18+1 21+1 28+2 34+1
-		deltac lowHeight 10+3 12+3 14+2 16+2 18+2 20+1 22+1 24+1
-		deltac supHeight  9+4 10+1 12+2 14+4 17+2 # Threshold=7/8
-		deltac ordHeight 10+2 13+1 18+1           # Threshold=7/8
-		deltac ascender  10+1 14+2 16+6 18+2 25-1
-		deltac descender 12-1 17-1 22-1
-		deltac brackTop  16+3
+		deltac capHeight  9+3 10+5 12+2 13+5 15+2 16+4 18+1 21+1 28+2 31+1 34+1 35+3
+		deltac lowHeight 10+3 12+3 14+2 16+2 18+2 20+1 21+5 22+1 24+1 31+4 35+3 37+3 39+2
+		deltac supHeight  9+4 10+1 12+2 14+4 17+2 24+3 27+1 31+4 32+1 39+2 # Threshold=7/8
+		deltac ordHeight  9+5 10+2 12+4 13+1 18+1 28+2 31+1 36+1           # Threshold=7/8
+		deltac ascender  10+1 14+2 16+6 18+2 25-1 31+5 37+1
+		deltac descender 12-1 16-3 17-1 21-3 22-1
+		deltac brackTop  15+1 16+3 28+2 36+2 37+4 40+1
 
 	# Use smart dropout control.
 

@@ -1,5 +1,5 @@
 maxp {
-	128 maxStackElements
+	192 maxStackElements
 	  8 maxFunctionDefs
 	  0 maxStorage
 	  2 maxZones
