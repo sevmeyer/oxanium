@@ -70,8 +70,9 @@ fpgm {
 		SWAP
 		MIAP[r]
 
-		# Move ptDiac relative to twilight point by adjusted distance.
-		MSIRP[rp0]
+		# Move ptDiac away from twilight point by
+		# adjusted distance, and set rp0 to ptDiac.
+		MSIRP[1]
 
 		# Restore zone pointer.
 		push 1

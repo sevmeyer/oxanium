@@ -30,12 +30,11 @@ flags {
 	x 1
 	r 1
 
-	rp0 1
 	rp1 1
 	rp2 0
 
 	abs 1 # For SHP after MDAP, MIAP
-	rel 0 # For SHP after MDRP, MIRP, MSIRP
+	rel 0 # For SHP after MDRP, MIRP
 
 	cur  0
 	orig 1
