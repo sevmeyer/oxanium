@@ -49,5 +49,5 @@ U+F000  TrueType hinting marker (up=on, down=off)
 Changelog
 ---------
 
-Oxanium 1.000  2019-TODO  Severin Meyer  hello@sev.dev
+Oxanium 1.000  2019-03-20  Severin Meyer  hello@sev.dev
   Initial release
