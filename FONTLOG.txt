@@ -17,10 +17,10 @@ Weights
 OpenType features
 -----------------
 
-kern  Provides kerning
-mark  Positions combining diacritics relative to base characters
-pnum  Replaces monospaced numerals with a proportional version
-zero  Replaces numeral zero with a dotted version
+kern  Provides kerning.
+mark  Positions combining diacritics relative to base characters.
+pnum  Replaces monospaced digits with proportional versions.
+zero  Replaces digit zero with a dotted version.
 
 
 Characters
