@@ -1,10 +1,6 @@
 .*/
-fonts/
 temp/
 
-*~
-*.otf
-*.ttf
 *.woff
 *.woff2
 *.zip

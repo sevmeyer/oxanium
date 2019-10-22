@@ -21,7 +21,7 @@ webfonts: $(woff) $(woff2)
 
 .PHONY: clean
 clean:
-	@ rm -fr temp fonts webfonts
+	@ rm -fr temp webfonts
 
 
 # File rules
