@@ -38,23 +38,23 @@ cvt {
 }
 
 flags {
-	y 0
-	x 1
-	r 1
+	0 y
+	1 x
+	1 r
 
-	rp1 1
-	rp2 0
+	1 rp1
+	0 rp2
 
-	abs 1 # For SHP after MDAP, MIAP
-	rel 0 # For SHP after MDRP, MIRP
+	1 abs # For SHP after MDAP, MIAP
+	0 rel # For SHP after MDRP, MIRP
 
-	cur  0
-	orig 1
+	0 cur
+	1 orig
 
-	stem 01001 # pMrB
-	STEM 11001 # PMrB
-	gap  01110 # pMRW
-	GAP  11110 # PMRW
-	grid 01100 # pMRG
-	GRID 11100 # PMRG
+	01001 stem # pMrB
+	11001 STEM # PMrB
+	01110 gap  # pMRW
+	11110 GAP  # PMRW
+	01100 grid # pMRG
+	11100 GRID # PMRG
 }

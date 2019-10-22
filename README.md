@@ -38,7 +38,7 @@ Dependencies
 
 - [FontForge](https://fontforge.github.io) 20170731
 - [FontTools](https://github.com/fonttools/fonttools) 3.34.2
-- [Humble Type Instruction Compiler](https://gitlab.com/sev/htic) 3.0.0
+- [Humble Type Instruction Compiler](https://gitlab.com/sev/htic) 3.4.0
 
 ### WOFF
 
