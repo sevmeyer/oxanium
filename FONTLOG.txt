@@ -49,5 +49,8 @@ U+F000  TrueType hinting marker (up=on, down=off)
 Changelog
 ---------
 
+Oxanium 1.001  2019-10-22  Severin Meyer  hello@sev.dev
+  - Revised metadata for Google Fonts.
+
 Oxanium 1.000  2019-03-20  Severin Meyer  hello@sev.dev
-  Initial release
+  - Initial release.

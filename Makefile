@@ -2,7 +2,7 @@
 # ---------
 
 family  := Oxanium
-version := 1.000
+version := 1.001
 styles  := ExtraLight Light Regular Medium SemiBold Bold ExtraBold
 
 fonts   := $(foreach s,$(styles), fonts/$(family)-$(s).ttf)
