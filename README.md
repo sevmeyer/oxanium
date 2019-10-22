@@ -11,21 +11,16 @@ Build
 The fonts can be compiled with the provided Makefile,
 which runs the scripts from the `tools` directory:
 
-```
-make all
-```
+    make fonts
+    make webfonts
 
 Fonts can be compiled individually as well:
 
-```
-make fonts/ttf/Oxanium-Regular.ttf
-```
+    make fonts/Oxanium-Regular.ttf
 
-The generated files can be deleted with:
+Generated files can be deleted with:
 
-```
-make clean
-```
+    make clean
 
 FontForge might complain about non-BMP kern pairs,
 these are fixed during the build process.

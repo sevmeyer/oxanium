@@ -4,58 +4,59 @@
 family  := Oxanium
 version := 1.000
 styles  := ExtraLight Light Regular Medium SemiBold Bold ExtraBold
-formats := ttf woff woff2
-fonts   := $(foreach s,$(styles), $(foreach f,$(formats), fonts/$(f)/$(family)-$(s).$(f)))
+
+fonts   := $(foreach s,$(styles), fonts/$(family)-$(s).ttf)
+woff    := $(foreach s,$(styles), webfonts/$(family)-$(s).woff)
+woff2   := $(foreach s,$(styles), webfonts/$(family)-$(s).woff2)
 
 
 # Convenience rules
 # -----------------
 
-.PHONY: all
-all: $(fonts)
+.PHONY: fonts
+fonts: $(fonts)
+
+.PHONY: webfonts
+webfonts: $(woff) $(woff2)
 
 .PHONY: clean
 clean:
-	@ rm -fr temp fonts
+	@ rm -fr temp fonts webfonts
 
 
 # File rules
 # ----------
 
-fonts/ttf/%.ttf: \
-	temp/ttf/%.ttf \
-	temp/fea/%.fea
-		@ mkdir -p $(@D)
-		@ ./tools/ttf-clean.py $^ $@
+fonts/%.ttf: temp/%.ttf temp/%.fea
+	@ mkdir -p $(@D)
+	@ ./tools/ttf-clean.py $^ $@
 
-fonts/woff/%.woff: \
-	fonts/ttf/%.ttf
-		@ mkdir -p $(@D)
-		@ ./tools/ttf-woff.py $^ $@
+webfonts/%.woff: fonts/%.ttf
+	@ mkdir -p $(@D)
+	@ ./tools/ttf-woff.py $^ $@
 
-fonts/woff2/%.woff2: \
-	fonts/ttf/%.ttf
-		@ mkdir -p $(@D)
-		@ ./tools/ttf-woff.py $^ $@
+webfonts/%.woff2: fonts/%.ttf
+	@ mkdir -p $(@D)
+	@ ./tools/ttf-woff.py $^ $@
 
-.PRECIOUS: temp/ttf/%.ttf
-temp/ttf/%.ttf: \
+.PRECIOUS: temp/%.ttf
+temp/%.ttf: \
 	sources/sfd/%.sfd \
-	temp/fea/%.fea \
-	temp/hti/%.hti
+	temp/%.fea \
+	temp/%.hti
 		@ mkdir -p $(@D)
 		@ ./tools/sfd-ttf.py $^ $(version) $@
 
-.PRECIOUS: temp/fea/$(family)-%.fea
-temp/fea/$(family)-%.fea: \
+.PRECIOUS: temp/$(family)-%.fea
+temp/$(family)-%.fea: \
 	sources/fea/$(family)-All-classes.fea \
 	sources/fea/$(family)-All-features.fea \
 	sources/fea/$(family)-%-marks.fea
 		@ mkdir -p $(@D)
 		@ cat $^ > $@
 
-.PRECIOUS: temp/hti/$(family)-%.hti
-temp/hti/$(family)-%.hti: \
+.PRECIOUS: temp/$(family)-%.hti
+temp/$(family)-%.hti: \
 	sources/hti/$(family)-All-tables.hti \
 	sources/hti/$(family)-All-fpgm.hti \
 	sources/hti/$(family)-All-prep.hti \
