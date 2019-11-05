@@ -1,8 +1,9 @@
 Oxanium
 =======
 
-This is the source repository for the
-[Oxanium font family](https://sev.dev/fonts/oxanium).
+Oxanium is a square, futuristic font family. It includes
+seven weights, and supports the Adobe Latin 3 character set.
+It is released under the SIL Open Font License.
 
 
 Build
@@ -18,7 +19,7 @@ Fonts can be compiled individually as well:
 
     make fonts/Oxanium-Regular.ttf
 
-Generated files can be deleted with:
+Intermediate files can be deleted with:
 
     make clean
 
