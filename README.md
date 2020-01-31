@@ -1,9 +1,13 @@
 Oxanium
 =======
 
-Oxanium is a square, futuristic font family. It includes
-seven weights, and supports the Adobe Latin 3 character set.
-It is released under the SIL Open Font License.
+Oxanium is a square, futuristic font family. It feels at home on the
+head-up display of a spaceship, or the scoreboard of a video game.
+Its intuitive strokes ensure legibility at small sizes and quick
+glances, while angled cuts add charisma to big headlines.
+
+Oxanium includes seven weights, and supports the Adobe Latin 3
+character set. It is released under the SIL Open Font License.
 
 
 Build
