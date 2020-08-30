@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar" format="2">
+  <advance width="262.8032786885246"/>
+  <unicode hex="007C"/>
+  <outline>
+    <contour>
+      <point x="102.08196721311475" y="-200.0" type="line"/>
+      <point x="102.08196721311475" y="740.0" type="line"/>
+      <point x="161.5737704918033" y="740.0" type="line"/>
+      <point x="161.5737704918033" y="-200.0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

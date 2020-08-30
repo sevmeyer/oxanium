@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ncaron" format="2">
+  <advance width="725.1967213114754"/>
+  <unicode hex="0147"/>
+  <outline>
+    <component base="N"/>
+    <component base="uni030C.cap" xOffset="691.6229508196722"/>
+  </outline>
+</glyph>

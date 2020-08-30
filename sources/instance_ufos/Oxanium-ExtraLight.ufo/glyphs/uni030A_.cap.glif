@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni030A.cap" format="2">
+  <outline>
+    <contour>
+      <point x="-407" y="801" type="qcurve" smooth="yes"/>
+      <point x="-407" y="858" type="line" smooth="yes"/>
+      <point x="-407" y="921"/>
+      <point x="-344" y="921" type="qcurve" smooth="yes"/>
+      <point x="-283" y="921" type="line" smooth="yes"/>
+      <point x="-220" y="921"/>
+      <point x="-220" y="858" type="qcurve" smooth="yes"/>
+      <point x="-220" y="801" type="line" smooth="yes"/>
+      <point x="-220" y="738"/>
+      <point x="-283" y="738" type="qcurve" smooth="yes"/>
+      <point x="-344" y="738" type="line" smooth="yes"/>
+      <point x="-407" y="738"/>
+    </contour>
+    <contour>
+      <point x="-371" y="798" type="line" smooth="yes"/>
+      <point x="-371" y="771"/>
+      <point x="-344" y="771" type="qcurve" smooth="yes"/>
+      <point x="-284" y="771" type="line" smooth="yes"/>
+      <point x="-256" y="771"/>
+      <point x="-256" y="798" type="qcurve" smooth="yes"/>
+      <point x="-256" y="861" type="line" smooth="yes"/>
+      <point x="-256" y="888"/>
+      <point x="-284" y="888" type="qcurve" smooth="yes"/>
+      <point x="-344" y="888" type="line" smooth="yes"/>
+      <point x="-371" y="888"/>
+      <point x="-371" y="861" type="qcurve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

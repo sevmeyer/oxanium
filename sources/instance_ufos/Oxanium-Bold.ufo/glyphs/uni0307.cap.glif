@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0307.cap" format="2">
+  <outline>
+    <contour>
+      <point x="-401.4590163934426" y="766.9918032786885" type="line"/>
+      <point x="-401.4590163934426" y="901.5491803278688" type="line"/>
+      <point x="-258.7950819672131" y="901.5491803278688" type="line"/>
+      <point x="-258.7950819672131" y="766.9918032786885" type="line"/>
+    </contour>
+  </outline>
+</glyph>

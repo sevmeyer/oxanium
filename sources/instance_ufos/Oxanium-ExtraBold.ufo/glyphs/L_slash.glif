@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Lslash" format="2">
+  <advance width="594"/>
+  <unicode hex="0141"/>
+  <outline>
+    <contour>
+      <point x="10" y="312" type="line"/>
+      <point x="116" y="372" type="line"/>
+      <point x="116" y="690" type="line"/>
+      <point x="290" y="690" type="line"/>
+      <point x="290" y="473" type="line"/>
+      <point x="395" y="534" type="line"/>
+      <point x="462" y="417" type="line"/>
+      <point x="290" y="317" type="line"/>
+      <point x="290" y="157" type="line"/>
+      <point x="570" y="157" type="line"/>
+      <point x="570" y="0" type="line"/>
+      <point x="116" y="0" type="line"/>
+      <point x="116" y="217" type="line"/>
+      <point x="78" y="194" type="line"/>
+    </contour>
+  </outline>
+</glyph>

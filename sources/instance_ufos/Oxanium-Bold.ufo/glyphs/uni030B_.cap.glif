@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni030B.cap" format="2">
+  <outline>
+    <contour>
+      <point x="-493.94262295081967" y="783.1065573770492" type="line"/>
+      <point x="-378.08196721311475" y="948.0245901639345" type="line"/>
+      <point x="-296.6311475409836" y="886.0573770491803" type="line"/>
+      <point x="-424.0163934426229" y="727.9016393442623" type="line"/>
+    </contour>
+    <contour>
+      <point x="-308.92622950819674" y="783.1065573770492" type="line"/>
+      <point x="-193.0655737704918" y="948.0245901639345" type="line"/>
+      <point x="-112.37704918032787" y="886.0573770491803" type="line"/>
+      <point x="-239.0" y="727.9016393442623" type="line"/>
+    </contour>
+  </outline>
+</glyph>
