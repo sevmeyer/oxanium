@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="braceleft" format="2">
+  <advance width="420"/>
+  <unicode hex="007B"/>
+  <outline>
+    <contour>
+      <point x="50" y="251" type="line"/>
+      <point x="50" y="319" type="line"/>
+      <point x="130" y="399" type="line"/>
+      <point x="130" y="598" type="line" smooth="yes"/>
+      <point x="130" y="760"/>
+      <point x="292" y="760" type="qcurve" smooth="yes"/>
+      <point x="390" y="760" type="line"/>
+      <point x="390" y="640" type="line"/>
+      <point x="300" y="640" type="line" smooth="yes"/>
+      <point x="268" y="640"/>
+      <point x="268" y="608" type="qcurve" smooth="yes"/>
+      <point x="268" y="367" type="line"/>
+      <point x="186" y="285" type="line"/>
+      <point x="268" y="203" type="line"/>
+      <point x="268" y="-28" type="line" smooth="yes"/>
+      <point x="268" y="-60"/>
+      <point x="300" y="-60" type="qcurve" smooth="yes"/>
+      <point x="390" y="-60" type="line"/>
+      <point x="390" y="-180" type="line"/>
+      <point x="292" y="-180" type="line" smooth="yes"/>
+      <point x="130" y="-180"/>
+      <point x="130" y="-18" type="qcurve" smooth="yes"/>
+      <point x="130" y="171" type="line"/>
+    </contour>
+  </outline>
+</glyph>

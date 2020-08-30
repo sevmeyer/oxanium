@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="pi" format="2">
+  <advance width="595"/>
+  <unicode hex="03C0"/>
+  <outline>
+    <contour>
+      <point x="75" y="0" type="line"/>
+      <point x="75" y="525" type="line"/>
+      <point x="520" y="525" type="line"/>
+      <point x="520" y="0" type="line"/>
+      <point x="404" y="0" type="line"/>
+      <point x="404" y="424" type="line"/>
+      <point x="192" y="424" type="line"/>
+      <point x="192" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

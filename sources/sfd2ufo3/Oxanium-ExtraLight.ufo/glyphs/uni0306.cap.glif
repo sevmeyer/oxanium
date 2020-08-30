@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0306.cap" format="2">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="-431" y="828" type="qcurve" smooth="yes"/>
+      <point x="-431" y="882" type="line"/>
+      <point x="-392" y="882" type="line"/>
+      <point x="-392" y="827" type="line" smooth="yes"/>
+      <point x="-392" y="803"/>
+      <point x="-368" y="803" type="qcurve" smooth="yes"/>
+      <point x="-259" y="803" type="line" smooth="yes"/>
+      <point x="-235" y="803"/>
+      <point x="-235" y="827" type="qcurve" smooth="yes"/>
+      <point x="-235" y="882" type="line"/>
+      <point x="-196" y="882" type="line"/>
+      <point x="-196" y="828" type="line" smooth="yes"/>
+      <point x="-196" y="764"/>
+      <point x="-261" y="764" type="qcurve" smooth="yes"/>
+      <point x="-367" y="764" type="line" smooth="yes"/>
+      <point x="-431" y="764"/>
+    </contour>
+  </outline>
+</glyph>

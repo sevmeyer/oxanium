@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="parenright" format="2">
+  <advance width="321"/>
+  <unicode hex="0029"/>
+  <outline>
+    <contour>
+      <point x="19" y="-137" type="line"/>
+      <point x="153" y="51"/>
+      <point x="153" y="529"/>
+      <point x="19" y="717" type="qcurve"/>
+      <point x="93" y="773" type="line"/>
+      <point x="253" y="558"/>
+      <point x="253" y="22"/>
+      <point x="93" y="-193" type="qcurve"/>
+    </contour>
+  </outline>
+</glyph>
