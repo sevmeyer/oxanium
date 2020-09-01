@@ -36,8 +36,6 @@
     <string>Oxanium</string>
     <key>openTypeNamePreferredSubfamilyName</key>
     <string>ExtraLight</string>
-    <key>openTypeNameVersion</key>
-    <string>Version 0.000</string>
     <key>openTypeOS2FamilyClass</key>
     <array>
       <integer>0</integer>
