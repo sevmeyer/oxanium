@@ -12,11 +12,11 @@ rm -rf ../fonts
 
 echo "Generating Static fonts"
 mkdir -p ../fonts
-fontmake -m Oxanium.designspace -i -o ttf --output-dir ../fonts/ttf/
+fontmake -m Oxanium.designspace -i -o ttf --output-dir ../fonts/ttf/ --keep-overlaps --keep-direction
 
 echo "Generating VFs"
 mkdir -p ../fonts/variable
-fontmake -m Oxanium.designspace -o variable --output-path ../fonts/variable/Oxanium[wght].ttf
+fontmake -m Oxanium.designspace -o variable --output-path ../fonts/variable/Oxanium[wght].ttf --keep-overlaps  --keep-direction
 
 
 rm -rf master_ufo/ instance_ufo/ instance_ufos/
