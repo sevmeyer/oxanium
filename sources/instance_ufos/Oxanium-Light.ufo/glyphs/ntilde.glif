@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<glyph name="ntilde" format="2">
-  <advance width="583.5081967213115"/>
-  <unicode hex="00F1"/>
-  <outline>
-    <component base="n"/>
-    <component base="uni0303" xOffset="578.5081967213115"/>
-  </outline>
-</glyph>

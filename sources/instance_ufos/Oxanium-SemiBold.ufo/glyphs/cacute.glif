@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<glyph name="cacute" format="2">
-  <advance width="513.1147540983607"/>
-  <unicode hex="0107"/>
-  <outline>
-    <component base="c"/>
-    <component base="uni0301" xOffset="575.0327868852459"/>
-  </outline>
-</glyph>

@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<glyph name="Imacron" format="2">
-  <advance width="251.5737704918033"/>
-  <unicode hex="012A"/>
-  <outline>
-    <component base="I"/>
-    <component base="uni0304.cap" xOffset="442.88524590163934"/>
-  </outline>
-</glyph>
