@@ -31,6 +31,24 @@ do
 	#mv "$ttf.fix" $ttf;
 done
 
+echo "HTIC hinting"
+mkdir -p temp;
+cat hti/Oxanium-All-tables.hti | sed 's/#ifBold//' > temp/Oxanium-Bold.hti
+cat hti/Oxanium-All-tables.hti | sed 's/#ifExtraBold//' > temp/Oxanium-ExtraBold.hti
+cat hti/Oxanium-All-tables.hti | sed 's/#ifExtraLight//' > temp/Oxanium-ExtraLight.hti
+cat hti/Oxanium-All-tables.hti | sed 's/#ifLight//' > temp/Oxanium-Light.hti
+cat hti/Oxanium-All-tables.hti | sed 's/#ifMedium//' > temp/Oxanium-Medium.hti
+cat hti/Oxanium-All-tables.hti | sed 's/#ifRegular//' > temp/Oxanium-Regular.hti
+cat hti/Oxanium-All-tables.hti | sed 's/#ifSemiBold//' > temp/Oxanium-SemiBold.hti
+weights=$(echo Bold ExtraBold ExtraLight Light Medium Regular SemiBold)
+for weight in $weights
+do
+	cat hti/Oxanium-All-fpgm.hti >> temp/Oxanium-$weight.hti
+	cat hti/Oxanium-All-prep.hti >> temp/Oxanium-$weight.hti
+	cat hti/Oxanium-All-glyphs.hti >> temp/Oxanium-$weight.hti
+	../tools/htic-ttf.py ../fonts/ttf/Oxanium-$weight.ttf temp/Oxanium-$weight.hti
+done
+
 vfs=$(ls ../fonts/variable/*\[wght\].ttf)
 
 echo "Post processing VFs"
@@ -68,7 +86,7 @@ do
 done
 for ttf in $ttfs
 do
-	gftools fix-nonhinting $ttf "$ttf.fix";
+	# gftools fix-nonhinting $ttf "$ttf.fix";
     if [ -f "$ttf.fix" ]; then mv "$ttf.fix" $ttf; fi
 	gftools fix-fsselection $ttf --usetypometrics;
 done
