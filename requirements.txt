@@ -29,6 +29,7 @@ gitdb==4.0.5
 gitdb2==4.0.2
 GitPython==3.1.7
 glyphsLib==5.1.11
+git+https://gitlab.com/sev/htic.git@v3.6.0
 idna==2.10
 itsdangerous==1.1.0
 Jinja2==2.11.2
