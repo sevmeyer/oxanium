@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="l" format="2">
   <advance width="335"/>
   <unicode hex="006C"/>
+  <anchor x="148" y="717" name="top"/>
+  <anchor x="190" y="0" name="bottom"/>
   <outline>
     <contour>
       <point x="64" y="217" type="qcurve" smooth="yes"/>

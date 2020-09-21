@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="f" format="2">
   <advance width="428"/>
   <unicode hex="0066"/>
+  <anchor x="242" y="717" name="top"/>
+  <anchor x="162" y="0" name="bottom"/>
   <outline>
     <contour>
       <point x="68" y="0" type="line"/>
