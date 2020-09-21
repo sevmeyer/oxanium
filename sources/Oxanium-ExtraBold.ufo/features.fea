@@ -1,4 +1,5 @@
-
+include(../fea/Oxanium-All-classes.fea);
+include(../fea/Oxanium-All-features.fea);
 
 @GDEF_Simple = [\.null \nonmarkingreturn \space \exclam \quotedbl \numbersign 
 	\dollar \percent \ampersand \quotesingle \parenleft \parenright \asterisk \plus 
