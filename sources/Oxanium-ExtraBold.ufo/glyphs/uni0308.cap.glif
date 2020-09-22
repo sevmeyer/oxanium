@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0308.cap" format="2">
+  <anchor x="-335" y="690" name="_top"/>
+  <outline>
+    <contour>
+      <point x="-510" y="746" type="line"/>
+      <point x="-510" y="888" type="line"/>
+      <point x="-370" y="888" type="line"/>
+      <point x="-370" y="746" type="line"/>
+    </contour>
+    <contour>
+      <point x="-300" y="746" type="line"/>
+      <point x="-300" y="888" type="line"/>
+      <point x="-160" y="888" type="line"/>
+      <point x="-160" y="746" type="line"/>
+    </contour>
+  </outline>
+</glyph>

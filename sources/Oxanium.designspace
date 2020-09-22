@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="200" maximum="800" default="200">
+      <map input="200" output="45"/>
+      <map input="300" output="63"/>
+      <map input="400" output="80"/>
+      <map input="500" output="97"/>
+      <map input="600" output="117"/>
+      <map input="700" output="138"/>
+      <map input="800" output="167"/>
+    </axis>
+  </axes>
+  <sources>
+    <source filename="Oxanium-ExtraLight.ufo" name="Oxanium ExtraLight" familyname="Oxanium" stylename="ExtraLight">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="Weight" xvalue="45"/>
+      </location>
+    </source>
+    <source filename="Oxanium-ExtraBold.ufo" name="Oxanium ExtraBold" familyname="Oxanium" stylename="ExtraBold">
+      <location>
+        <dimension name="Weight" xvalue="167"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Oxanium ExtraLight" familyname="Oxanium" stylename="ExtraLight" filename="instance_ufos/Oxanium-ExtraLight.ufo">
+      <location>
+        <dimension name="Weight" xvalue="45"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>786F3AE7-681A-4E36-83D7-614DB6CCA2F0</key>
+            <integer>1</integer>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>ExtraLight</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+    <instance name="Oxanium Light" familyname="Oxanium" stylename="Light" filename="instance_ufos/Oxanium-Light.ufo">
+      <location>
+        <dimension name="Weight" xvalue="63"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>786F3AE7-681A-4E36-83D7-614DB6CCA2F0</key>
+            <real>0.85</real>
+            <key>A57419AF-C607-4C6D-867D-F9F312359F5B</key>
+            <real>0.15</real>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>Light</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+    <instance name="Oxanium Regular" familyname="Oxanium" stylename="Regular" filename="instance_ufos/Oxanium-Regular.ufo">
+      <location>
+        <dimension name="Weight" xvalue="80"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>786F3AE7-681A-4E36-83D7-614DB6CCA2F0</key>
+            <real>0.7</real>
+            <key>A57419AF-C607-4C6D-867D-F9F312359F5B</key>
+            <real>0.3</real>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>Regular</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+    <instance name="Oxanium Medium" familyname="Oxanium" stylename="Medium" filename="instance_ufos/Oxanium-Medium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="97"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>786F3AE7-681A-4E36-83D7-614DB6CCA2F0</key>
+            <real>0.7</real>
+            <key>A57419AF-C607-4C6D-867D-F9F312359F5B</key>
+            <real>0.3</real>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>Regular</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+
+    <instance name="Oxanium SemiBold" familyname="Oxanium" stylename="SemiBold" filename="instance_ufos/Oxanium-SemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="117"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>786F3AE7-681A-4E36-83D7-614DB6CCA2F0</key>
+            <real>0.5</real>
+            <key>A57419AF-C607-4C6D-867D-F9F312359F5B</key>
+            <real>0.5</real>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>SemiBold</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+    <instance name="Oxanium Bold" familyname="Oxanium" stylename="Bold" filename="instance_ufos/Oxanium-Bold.ufo" stylemapfamilyname="Oxanium" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="138"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>786F3AE7-681A-4E36-83D7-614DB6CCA2F0</key>
+            <real>0.25</real>
+            <key>A57419AF-C607-4C6D-867D-F9F312359F5B</key>
+            <real>0.75</real>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>Bold</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+    <instance name="Oxanium ExtraBold" familyname="Oxanium" stylename="ExtraBold" filename="instance_ufos/Oxanium-ExtraBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="167"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.export</key>
+          <true/>
+          <key>com.schriftgestaltung.intanceInterpolations</key>
+          <dict>
+            <key>A57419AF-C607-4C6D-867D-F9F312359F5B</key>
+            <integer>1</integer>
+          </dict>
+          <key>com.schriftgestaltung.manualInterpolation</key>
+          <false/>
+          <key>com.schriftgestaltung.weight</key>
+          <string>ExtraBold</string>
+          <key>com.schriftgestaltung.width</key>
+          <string>Medium (normal)</string>
+        </dict>
+      </lib>
+    </instance>
+  </instances>
+</designspace>
