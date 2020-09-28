@@ -14,8 +14,8 @@ mkdir -p ../fonts
 fontmake -m Oxanium.designspace -i -o ttf --output-dir ../fonts/ttf/ --keep-overlaps --keep-direction
 
 echo "Post processing"
-ttfs=$(ls ../fonts/ttf/*.ttf)
-for ttf in $ttfs
+ttfs=(../fonts/ttf/*.ttf)
+for ttf in "${ttfs[@]}"
 do
 	gftools fix-dsig -f "$ttf"
 	#ttfautohint "$ttf" "$ttf.fix"
@@ -35,10 +35,10 @@ rm -rf master_ufo/ instance_ufo/ instance_ufos/
 
 
 
-vfs=$(ls ../fonts/variable/*\[wght\].ttf)
+vfs=(../fonts/variable/*\[wght\].ttf)
 
 echo "Post processing VFs"
-for vf in $vfs
+for vf in "${vfs[@]}"
 do
 	gftools fix-dsig -f "$vf"
 	#ttfautohint-vf --stem-width-mode nnn "$vf" "$vf.fix"
@@ -48,10 +48,10 @@ done
 
 
 echo "Fix VF Meta"
-gftools fix-vf-meta $vfs
+gftools fix-vf-meta "${vfs[@]}"
 
 echo "Dropping MVAR"
-for vf in $vfs
+for vf in "${vfs[@]}"
 do
 	mv "$vf.fix" "$vf"
 	ttx -f -x "MVAR" "$vf" # Drop MVAR. Table has issue in DW
@@ -64,7 +64,7 @@ do
 done
 
 echo "Fixing Hinting"
-for ttf in $ttfs $vfs
+for ttf in "${ttfs[@]}" "${vfs[@]}"
 do
 	# gftools fix-nonhinting "$ttf" "$ttf.fix"
 	gftools fix-hinting "$ttf"
