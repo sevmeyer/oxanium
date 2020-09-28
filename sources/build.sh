@@ -65,14 +65,7 @@ do
 done
 
 echo "Fixing Hinting"
-for vf in $vfs
-do
-	# gftools fix-nonhinting $vf "$vf.fix"
-	gftools fix-hinting $vf
-	if [ -f "$vf.fix" ]; then mv "$vf.fix" $vf; fi
-	gftools fix-fsselection $vf --usetypometrics
-done
-for ttf in $ttfs
+for ttf in $ttfs $vfs
 do
 	# gftools fix-nonhinting $ttf "$ttf.fix"
 	gftools fix-hinting $ttf
