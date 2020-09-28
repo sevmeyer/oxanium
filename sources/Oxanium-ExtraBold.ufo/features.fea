@@ -1,2 +1,2 @@
-include(../fea/Oxanium-All-classes.fea);
-include(../fea/Oxanium-All-features.fea);
+include(../fea/classes.fea);
+include(../fea/features.fea);
