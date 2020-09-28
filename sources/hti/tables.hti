@@ -27,14 +27,14 @@ cvt {
 	# The following values are used to
 	# calculate the placement of diacritics.
 
-	              690 capHeightOrig
-	#ifExtraLight 515 lowHeightOrig
-	#ifLight      518 lowHeightOrig
-	#ifRegular    520 lowHeightOrig
-	#ifMedium     522 lowHeightOrig
-	#ifSemiBold   525 lowHeightOrig
-	#ifBold       528 lowHeightOrig
-	#ifExtraBold  532 lowHeightOrig
+	                          690 capHeightOrig
+	#ifdef Oxanium-ExtraLight 515 lowHeightOrig
+	#ifdef Oxanium-Light      518 lowHeightOrig
+	#ifdef Oxanium-Regular    520 lowHeightOrig
+	#ifdef Oxanium-Medium     522 lowHeightOrig
+	#ifdef Oxanium-SemiBold   525 lowHeightOrig
+	#ifdef Oxanium-Bold       528 lowHeightOrig
+	#ifdef Oxanium-ExtraBold  532 lowHeightOrig
 }
 
 flags {
