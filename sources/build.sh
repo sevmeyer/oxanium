@@ -2,10 +2,9 @@
 set -e
 
 # Go the sources directory to run commands
-SOURCE="${BASH_SOURCE[0]}"
-DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
-cd $DIR
-echo $(pwd)
+DIR="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+cd "$DIR"
+pwd
 
 rm -rf ../fonts
 
@@ -18,9 +17,9 @@ echo "Post processing"
 ttfs=$(ls ../fonts/ttf/*.ttf)
 for ttf in $ttfs
 do
-	gftools fix-dsig -f $ttf
-	#ttfautohint $ttf "$ttf.fix"
-	#mv "$ttf.fix" $ttf
+	gftools fix-dsig -f "$ttf"
+	#ttfautohint "$ttf" "$ttf.fix"
+	#mv "$ttf.fix" "$ttf"
 	echo "Hinting $ttf"
 	name="$(basename "$ttf" .ttf)"
 	htic --define "$name" --font "$ttf" hti/tables.hti hti/fpgm.hti hti/prep.hti hti/glyphs.hti
@@ -41,9 +40,9 @@ vfs=$(ls ../fonts/variable/*\[wght\].ttf)
 echo "Post processing VFs"
 for vf in $vfs
 do
-	gftools fix-dsig -f $vf
-	#ttfautohint-vf --stem-width-mode nnn $vf "$vf.fix"
-	#mv "$vf.fix" $vf
+	gftools fix-dsig -f "$vf"
+	#ttfautohint-vf --stem-width-mode nnn "$vf" "$vf.fix"
+	#mv "$vf.fix" "$vf"
 done
 
 
@@ -54,23 +53,23 @@ gftools fix-vf-meta $vfs
 echo "Dropping MVAR"
 for vf in $vfs
 do
-	mv "$vf.fix" $vf
-	ttx -f -x "MVAR" $vf # Drop MVAR. Table has issue in DW
-	rtrip=$(basename -s .ttf $vf)
-	new_file=../fonts/variable/$rtrip.ttx
-	rm $vf
-	ttx $new_file
-	rm $new_file
+	mv "$vf.fix" "$vf"
+	ttx -f -x "MVAR" "$vf" # Drop MVAR. Table has issue in DW
+	rtrip="$(basename "$vf" .ttf)"
+	new_file="../fonts/variable/$rtrip.ttx"
+	rm "$vf"
+	ttx "$new_file"
+	rm "$new_file"
 
 done
 
 echo "Fixing Hinting"
 for ttf in $ttfs $vfs
 do
-	# gftools fix-nonhinting $ttf "$ttf.fix"
-	gftools fix-hinting $ttf
-    if [ -f "$ttf.fix" ]; then mv "$ttf.fix" $ttf; fi
-	gftools fix-fsselection $ttf --usetypometrics
+	# gftools fix-nonhinting "$ttf" "$ttf.fix"
+	gftools fix-hinting "$ttf"
+    if [ -f "$ttf.fix" ]; then mv "$ttf.fix" "$ttf"; fi
+	gftools fix-fsselection "$ttf" --usetypometrics
 done
 
 rm -f ../fonts/variable/*.ttx
