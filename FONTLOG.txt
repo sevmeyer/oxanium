@@ -20,7 +20,7 @@ OpenType features
 kern  Provides kerning.
 mark  Positions combining diacritics relative to base characters.
 pnum  Replaces monospaced digits with proportional versions.
-zero  Replaces digit zero with a dotted version.
+zero  Replaces zero digit with a dotted version.
 
 
 Characters
@@ -48,6 +48,14 @@ U+F000  TrueType hinting marker (up=on, down=off)
 
 Changelog
 ---------
+
+Oxanium 2.000  2020-09-29  Severin Meyer  hello@sev.dev
+  - Revised hinting of stem widths for better symmetry at small sizes.
+
+Oxanium 2.000-pre  2020-09-24  Type Network  https://typenetwork.com
+  - Converted source files to UFO3 format.
+  - Added variable font version.
+  - Removed legacy kern table.
 
 Oxanium 1.001  2019-10-22  Severin Meyer  hello@sev.dev
   - Revised metadata for Google Fonts.
