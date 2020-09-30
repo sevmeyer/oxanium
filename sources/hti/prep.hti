@@ -10,11 +10,6 @@ prep {
 			INSTCTRL 1 1
 		EIF
 
-	# Reduce minimum_distance for thin weights.
-
-		#ifLight      SMD 0.75
-		#ifExtraLight SMD 0.625
-
 	# Set CVT cut-in.
 
 		IF (50 >= (MPPEM))

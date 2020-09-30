@@ -51,8 +51,8 @@ flags {
 	0 cur
 	1 orig
 
-	01001 stem # pMrB
-	11001 STEM # PMrB
+	00001 stem # pmrB
+	10001 STEM # PmrB
 	01110 gap  # pMRW
 	11110 GAP  # PMRW
 	01100 grid # pMRG
