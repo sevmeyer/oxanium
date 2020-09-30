@@ -99,8 +99,8 @@ quotesingle {
 
 parenleft {
 	SVTCA[y]
-	MIAP[r] 7 brackBot
-	MIAP[r] 2 brackTop
+	MIAP[r] 0 brackBot
+	MIAP[r] 3 brackTop
 	IUP[y]
 }
 
@@ -2222,11 +2222,11 @@ Omega {
 
 estimated {
 	SVTCA[y]
-	MIAP[r]    13 baseline
-	MDRP[stem]  9
-	MIAP[r]     3 capHeight
+	MIAP[r]     6 baseline
+	MDRP[stem]  2
+	MIAP[r]    10 capHeight
 	MDRP[stem] 18
-	CALL ipBar 15 6 13 3
+	CALL ipBar 15 13 6 10
 	IUP[y]
 }
 
